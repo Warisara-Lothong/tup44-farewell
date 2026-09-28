@@ -4,198 +4,2556 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>TUP 44 Farewell</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Prompt:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#fbeee8;--pink:#f4c8cb;--card:#fff;--ink:#4a1010;--mauve:#8b6468;--rose:#b0525f;--line:#cf8a96;--b1:#e8949e;--b2:#c97d93;--ok:#3f9b3f;--wait:#e6a72c;--bad:#c62a2a;--wrap:#faeee9;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1719;--pink:#4a2a2f;--card:#3a2226;--ink:#f8e4e4;--mauve:#d6b0b4;--rose:#f0a0ae;--line:#a86672;--wrap:#33201f}}
-:root[data-theme="dark"]{--bg:#2a1719;--pink:#4a2a2f;--card:#3a2226;--ink:#f8e4e4;--mauve:#d6b0b4;--rose:#f0a0ae;--line:#a86672;--wrap:#33201f}
-html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
-*{box-sizing:border-box}
-body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:'Prompt','Noto Sans Thai',sans-serif;
-background-image:radial-gradient(circle at 8% 12%,#f7c9d0aa 0 60px,transparent 62px),radial-gradient(circle at 92% 30%,#f7c9d088 0 90px,transparent 92px),radial-gradient(circle at 20% 85%,#f7c9d077 0 70px,transparent 72px)}
-.top{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-.brand{font-family:'Mitr',sans-serif;font-size:22px;color:var(--rose);text-shadow:2px 2px 0 var(--pink)}
-.brand small{display:block;font-family:'Prompt';font-size:10px;letter-spacing:.06em;color:var(--ink);text-shadow:none}
-.who{font-size:13px;color:var(--mauve)}
-.who a{color:var(--ink);cursor:pointer;text-decoration:underline;margin-left:8px}
-main{max-width:1000px;margin:0 auto;padding:8px 16px 40px}
-.script{font-family:'Great Vibes','Brush Script MT',cursive;color:var(--rose);line-height:1}
-.title{font-family:'Mitr',sans-serif;color:var(--rose);text-shadow:3px 3px 0 var(--pink),-1px -1px 0 var(--line);font-weight:600}
-.hero{text-align:center;padding:40px 0 24px}
-.hero .title{font-size:clamp(56px,14vw,120px);margin:0}
-.hero .script{font-size:clamp(64px,17vw,150px);margin:-10px 0 0}
-.hero p{letter-spacing:.14em;font-weight:600;font-size:13px;margin:12px 0 28px}
-.crest{font-size:52px}
-.btn{font-family:'Mitr',sans-serif;font-size:20px;color:#fff;border:0;cursor:pointer;padding:14px 44px;min-width:220px;background:linear-gradient(#e8949e,#c97d93);
-clip-path:polygon(0 8px,8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px));box-shadow:0 8px 16px #c97d9366}
-.btn.sm{font-size:15px;padding:9px 20px;min-width:0;width:100%}
-.btn:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-.panel{background:var(--wrap);border:2px solid var(--line);border-radius:22px;padding:28px;max-width:440px;margin:24px auto}
-label{display:block;font-family:'Mitr';color:var(--mauve);margin:14px 0 6px}
-input[type=text],input[type=password]{width:100%;padding:13px 16px;font:inherit;font-size:16px;border:3px solid var(--line);border-radius:14px;background:#fff;color:#4a1010}
-.msg{color:var(--bad);min-height:22px;font-size:14px;margin:10px 0}
-.alt{font-size:14px;color:var(--mauve);margin:16px 0}
-.alt a{color:var(--ink);font-weight:600;text-decoration:underline;cursor:pointer}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:38px 20px;margin-top:34px}
-.box{position:relative;background:var(--card);border:3px solid var(--line);border-radius:20px;padding:34px 18px 16px}
-.box>h2{position:absolute;top:-24px;left:50%;transform:translateX(-50%);margin:0;white-space:nowrap;font-size:32px;font-family:'Mitr';color:var(--rose);text-shadow:2px 2px 0 var(--pink),-1px -1px 0 var(--line)}
-.box.wide{grid-column:1/-1}
-.row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px}
-.row:last-child{border:0}
-.row b{white-space:nowrap}
-.big{font-family:'Mitr';font-size:clamp(38px,10vw,64px);text-align:center;color:var(--ink)}
-.note{font-size:12px;color:var(--mauve);margin-top:8px}
-.center{text-align:center;margin-top:34px}
-.legend{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;font-size:13px;margin:8px 0 0}
-.dot{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:6px}
-.ok{background:radial-gradient(circle at 35% 30%,#8be48b,var(--ok))}.wait{background:radial-gradient(circle at 35% 30%,#ffd57a,var(--wait))}.bad{background:radial-gradient(circle at 35% 30%,#ff7a7a,var(--bad))}
-.room{font-family:'Mitr';font-size:clamp(56px,14vw,96px);text-align:center;margin:0;color:var(--ink)}
-.rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 16px;margin-top:34px}
-.rd .box{padding:30px 14px 14px;min-height:130px}
-.rd .box h2{font-size:22px;top:-18px}
-.rd .amt{font-family:'Mitr';font-size:28px;text-align:center}
-.rd .st{font-size:12px;text-align:center;color:var(--mauve);margin-top:4px}
-.rd .btn{margin-top:14px}
-.rd .fn{font-size:11px;color:var(--mauve);text-align:center;margin-top:6px;word-break:break-all}
-.total .amt{font-size:clamp(40px,10vw,68px)}
-.tabs{display:flex;gap:8px;justify-content:center;margin:0 0 14px}
-.tabs button{font:inherit;padding:8px 18px;border:2px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer}
-.tabs button.on{background:linear-gradient(#e8949e,#c97d93);color:#fff;border-color:transparent}
-.tw{overflow-x:auto;margin-top:10px}table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{padding:8px 10px;border-bottom:1px dashed var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child,th:last-child,td:last-child{text-align:left}
-th{font-family:'Mitr';font-weight:500;color:var(--mauve)}tfoot td{font-weight:600;white-space:normal;border:0;padding-top:14px}
-@media(max-width:720px){.grid,.rounds{grid-template-columns:1fr}.box>h2{font-size:26px}}
-@media(prefers-reduced-motion:no-preference){.btn{transition:transform .15s}.btn:hover{transform:translateY(-2px)}}
+:root{
+  --bg:#fbeee8;
+  --pink:#f4c8cb;
+  --card:#fff;
+  --ink:#4a1010;
+  --mauve:#8b6468;
+  --rose:#b0525f;
+  --line:#cf8a96;
+  --b1:#e8949e;
+  --b2:#c97d93;
+  --ok:#3f9b3f;
+  --wait:#e6a72c;
+  --bad:#c62a2a;
+  --wrap:#faeee9;
+}
+
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#2a1719;
+    --pink:#4a2a2f;
+    --card:#3a2226;
+    --ink:#f8e4e4;
+    --mauve:#d6b0b4;
+    --rose:#f0a0ae;
+    --line:#a86672;
+    --wrap:#33201f;
+  }
+}
+
+:root[data-theme="dark"]{
+  --bg:#2a1719;
+  --pink:#4a2a2f;
+  --card:#3a2226;
+  --ink:#f8e4e4;
+  --mauve:#d6b0b4;
+  --rose:#f0a0ae;
+  --line:#a86672;
+  --wrap:#33201f;
+}
+
+html{
+  scroll-padding-top:env(safe-area-inset-top,0px);
+  height:100%;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100%;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Prompt','Noto Sans Thai',sans-serif;
+
+  background-image:
+    radial-gradient(circle at 8% 12%,#f7c9d0aa 0 60px,transparent 62px),
+    radial-gradient(circle at 92% 30%,#f7c9d088 0 90px,transparent 92px),
+    radial-gradient(circle at 20% 85%,#f7c9d077 0 70px,transparent 72px);
+
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+}
+
+.brand{
+  font-family:'Mitr',sans-serif;
+  font-size:22px;
+  color:var(--rose);
+  text-shadow:2px 2px 0 var(--pink);
+}
+
+.brand small{
+  display:block;
+  font-family:'Prompt';
+  font-size:10px;
+  letter-spacing:.06em;
+  color:var(--ink);
+  text-shadow:none;
+}
+
+.who{
+  font-size:13px;
+  color:var(--mauve);
+}
+
+.who a{
+  color:var(--ink);
+  cursor:pointer;
+  text-decoration:underline;
+  margin-left:8px;
+}
+
+main{
+  max-width:1000px;
+  margin:0 auto;
+  padding:8px 16px 40px;
+}
+
+.script{
+  font-family:'Great Vibes','Brush Script MT',cursive;
+  color:var(--rose);
+  line-height:1;
+}
+
+.title{
+  font-family:'Mitr',sans-serif;
+  color:var(--rose);
+  text-shadow:3px 3px 0 var(--pink),-1px -1px 0 var(--line);
+  font-weight:600;
+}
+
+.hero{
+  text-align:center;
+  padding:40px 0 24px;
+}
+
+.hero .title{
+  font-size:clamp(56px,14vw,120px);
+  margin:0;
+}
+
+.hero .script{
+  font-size:clamp(64px,17vw,150px);
+  margin:-10px 0 0;
+}
+
+.hero p{
+  letter-spacing:.14em;
+  font-weight:600;
+  font-size:13px;
+  margin:12px 0 28px;
+}
+
+.crest{
+  font-size:52px;
+}
+
+.btn{
+  font-family:'Mitr',sans-serif;
+  font-size:20px;
+  color:#fff;
+  border:0;
+  cursor:pointer;
+  padding:14px 44px;
+  min-width:220px;
+  background:linear-gradient(#e8949e,#c97d93);
+
+  clip-path:polygon(
+    0 8px,
+    8px 0,
+    calc(100% - 8px) 0,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    0 calc(100% - 8px)
+  );
+
+  box-shadow:0 8px 16px #c97d9366;
+}
+
+.btn.sm{
+  font-size:15px;
+  padding:9px 20px;
+  min-width:0;
+  width:100%;
+}
+
+.btn:focus-visible,
+input:focus-visible,
+a:focus-visible{
+  outline:3px solid var(--ink);
+  outline-offset:2px;
+}
+
+.panel{
+  background:var(--wrap);
+  border:2px solid var(--line);
+  border-radius:22px;
+  padding:28px;
+  max-width:440px;
+  margin:24px auto;
+}
+
+label{
+  display:block;
+  font-family:'Mitr';
+  color:var(--mauve);
+  margin:14px 0 6px;
+}
+
+input[type=text],
+input[type=password]{
+  width:100%;
+  padding:13px 16px;
+  font:inherit;
+  font-size:16px;
+  border:3px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  color:#4a1010;
+}
+
+.msg{
+  color:var(--bad);
+  min-height:22px;
+  font-size:14px;
+  margin:10px 0;
+}
+
+.alt{
+  font-size:14px;
+  color:var(--mauve);
+  margin:16px 0;
+}
+
+.alt a{
+  color:var(--ink);
+  font-weight:600;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:38px 20px;
+  margin-top:34px;
+}
+
+.box{
+  position:relative;
+  background:var(--card);
+  border:3px solid var(--line);
+  border-radius:20px;
+  padding:34px 18px 16px;
+}
+
+.box>h2{
+  position:absolute;
+  top:-24px;
+  left:50%;
+  transform:translateX(-50%);
+  margin:0;
+  white-space:nowrap;
+  font-size:32px;
+  font-family:'Mitr';
+  color:var(--rose);
+  text-shadow:2px 2px 0 var(--pink),-1px -1px 0 var(--line);
+}
+
+.box.wide{
+  grid-column:1/-1;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:7px 0;
+  border-bottom:1px dashed var(--line);
+  font-size:14px;
+}
+
+.row:last-child{
+  border:0;
+}
+
+.row b{
+  white-space:nowrap;
+}
+
+.big{
+  font-family:'Mitr';
+  font-size:clamp(38px,10vw,64px);
+  text-align:center;
+  color:var(--ink);
+}
+
+.note{
+  font-size:12px;
+  color:var(--mauve);
+  margin-top:8px;
+}
+
+.center{
+  text-align:center;
+  margin-top:34px;
+}
+
+.legend{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  justify-content:center;
+  font-size:13px;
+  margin:8px 0 0;
+}
+
+.dot{
+  display:inline-block;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  vertical-align:-2px;
+  margin-right:6px;
+}
+
+.ok{
+  background:radial-gradient(circle at 35% 30%,#8be48b,var(--ok));
+}
+
+.wait{
+  background:radial-gradient(circle at 35% 30%,#ffd57a,var(--wait));
+}
+
+.bad{
+  background:radial-gradient(circle at 35% 30%,#ff7a7a,var(--bad));
+}
+
+.room{
+  font-family:'Mitr';
+  font-size:clamp(56px,14vw,96px);
+  text-align:center;
+  margin:0;
+  color:var(--ink);
+}
+
+.rounds{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:34px 16px;
+  margin-top:34px;
+}
+
+.rd .box{
+  padding:30px 14px 14px;
+  min-height:130px;
+}
+
+.rd .box h2{
+  font-size:22px;
+  top:-18px;
+}
+
+.rd .amt{
+  font-family:'Mitr';
+  font-size:28px;
+  text-align:center;
+}
+
+.rd .st{
+  font-size:12px;
+  text-align:center;
+  color:var(--mauve);
+  margin-top:4px;
+}
+
+.rd .btn{
+  margin-top:14px;
+}
+
+.rd .fn{
+  font-size:11px;
+  color:var(--mauve);
+  text-align:center;
+  margin-top:6px;
+  word-break:break-all;
+}
+
+.total .amt{
+  font-size:clamp(40px,10vw,68px);
+}
+
+.tabs{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  margin:0 0 14px;
+}
+
+.tabs button{
+  font:inherit;
+  padding:8px 18px;
+  border:2px solid var(--line);
+  border-radius:999px;
+  background:var(--card);
+  color:var(--ink);
+  cursor:pointer;
+}
+
+.tabs button.on{
+  background:linear-gradient(#e8949e,#c97d93);
+  color:#fff;
+  border-color:transparent;
+}
+
+.tw{
+  overflow-x:auto;
+  margin-top:10px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  padding:8px 10px;
+  border-bottom:1px dashed var(--line);
+  text-align:right;
+  white-space:nowrap;
+}
+
+th:first-child,
+td:first-child,
+th:last-child,
+td:last-child{
+  text-align:left;
+}
+
+th{
+  font-family:'Mitr';
+  font-weight:500;
+  color:var(--mauve);
+}
+
+tfoot td{
+  font-weight:600;
+  white-space:normal;
+  border:0;
+  padding-top:14px;
+}
+
+.error-box{
+  background:#fff0f0;
+  border:2px solid #d77;
+  color:#8b2020;
+  padding:14px;
+  border-radius:14px;
+  margin:20px 0;
+  font-size:14px;
+}
+
+.success-box{
+  background:#effbef;
+  border:2px solid #76b976;
+  color:#276627;
+  padding:14px;
+  border-radius:14px;
+  margin:20px 0;
+  font-size:14px;
+}
+
+.loading{
+  text-align:center;
+  padding:30px;
+  color:var(--mauve);
+}
+
+@media(max-width:720px){
+  .grid,
+  .rounds{
+    grid-template-columns:1fr;
+  }
+
+  .box>h2{
+    font-size:26px;
+  }
+}
+
+@media(prefers-reduced-motion:no-preference){
+  .btn{
+    transition:transform .15s;
+  }
+
+  .btn:hover{
+    transform:translateY(-2px);
+  }
+}
 </style>
 </head>
+
 <body>
-<div class="top"><div class="brand">TUP 44 Farewell<small>TRIAMUDOMSAKKAPATANAKRAN SCHOOL</small></div><div class="who" id="who"></div></div>
-<main id="app"></main>
+
+<div class="top">
+  <div class="brand">
+    TUP 44 Farewell
+    <small>TRIAMUDOMSAKKAPATANAKRAN SCHOOL</small>
+  </div>
+
+  <div class="who" id="who"></div>
+</div>
+
+<main id="app">
+  <div class="loading">กำลังโหลดเว็บไซต์...</div>
+</main>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
-<script>window.supabase||document.write('<script src="https://unpkg.com/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"><\/script>')</script>
-<script>document.write('<script src="config.js?t='+Date.now()+'"><\/script>')</script>
+
 <script>
-// ===== ข้อมูล (แก้ตรงนี้เมื่อมียอดใหม่) =====
-let P=[28,25,26,39,38,27,34,33,36,36,35,36,36,36,40,28,31,38,37,33]; // จำนวนคนห้อง 6/1–6/20
-let RATE=[500,350,350]; // บาท/คน แต่ละรอบ
-let ROUNDS=[
- {date:"23/07/2569",time:"08:15",amt:P.map(p=>p*500)},
- {date:"05/09/2569",time:"11:20",amt:P.map(p=>p*350)},
- {date:"27/09/2569",time:"15:45",amt:[9800,8750,9100,13650,13300,9450,11900,null,12600,12600,12250,12600,11550,12600,14000,null,10850,13300,12950,null]}
-];
-let BANK_VERIFIED=[true,true,false]; // รอบ 3 ยังไม่ได้ตรวจกับธนาคาร
-const BANK=["ตรวจสอบแล้ว (ยอดตรงกับธนาคาร)","ตรวจสอบแล้ว (ยอดตรงกับธนาคาร)","ยังไม่ได้ตรวจสอบกับยอดธนาคาร"];
-const CLOSED=["ปิดยอดครั้งที่ 1","ปิดยอดครั้งที่ 2","อยู่ระหว่างเก็บยอดครั้งที่ 3"];
-let EXPENSES=[
- {d:"17/08/2569",n:"โฟโต้บูธ",unit:7500,qty:2,paid:5000},
- {d:"04-05/09/2569",n:"วงดนตรี (SCRUBB)",unit:120000,qty:1,paid:60000}
-];
-const EXP_NOTE="โอนค่าวงดนตรีงวดที่ 1 เป็น 2 รอบ รอบละ 30,000 บาท เพราะธนาคารจำกัดโอนไม่เกิน 50,000 บาท/วัน";
-// ===== ตัวช่วย =====
-const $=s=>document.querySelector(s), app=$('#app');
-const fmt=n=>n.toLocaleString('en-US');
-const sum=a=>a.reduce((x,y)=>x+(y||0),0);
-const MAP={'ครบถ้วน':'ok','รอการตรวจสอบ':'wait','ไม่ครบถ้วน':'bad'},LBL={ok:'ครบถ้วน',wait:'รอการตรวจสอบ',bad:'ไม่ครบถ้วน'};
-function status(r,i){const R=ROUNDS[r],a=R.amt[i],need=P[i]*RATE[r];
- let c=MAP[R.st&&R.st[i]]||(a==null?'wait':a<need?'bad':'ok');
- return{c,t:LBL[c]+(c==='bad'&&a!=null&&a<need?' (ขาด '+Math.round((need-a)/RATE[r])+' คน)':'')}}
-let income,totalIn,totalOut,balance;
-function recalc(){income=ROUNDS.map(r=>sum(r.amt));totalIn=sum(income);totalOut=sum(EXPENSES.map(e=>e.paid));balance=totalIn-totalOut}recalc();
-const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
-async function hash(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-const roomOf=u=>{const m=/_6\/(\d{1,2})$/.exec(u.trim());return m&&+m[1]>=1&&+m[1]<=20?+m[1]:null};
-let session=null, slips={};
-function who(){$('#who').innerHTML=session?`ห้อง ม.6/${session.room}<a role="button" tabindex="0" id="out">ออกจากระบบ</a>`:'';
- if(session)$('#out').onclick=()=>{sb&&sb.auth.signOut();session=null;go('home')}}
-function go(v){who();({home,login,register,dash,room}[!session&&(v==='dash'||v==='room')?'login':v])();scrollTo(0,0)}
-// ===== เชื่อม Google Sheets (วางลิงก์ CSV ของแต่ละแท็บที่นี่) =====
-const SHEETS=CONFIG.sheets;
-function csv(t){const rows=[];let r=[],c='',q=false;for(let i=0;i<t.length;i++){const ch=t[i];
- if(q){if(ch=='"'&&t[i+1]=='"'){c+='"';i++}else if(ch=='"')q=false;else c+=ch}
- else if(ch=='"')q=true;else if(ch==','){r.push(c);c=''}
- else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;r.push(c);c='';rows.push(r);r=[]}else c+=ch}
- if(c||r.length){r.push(c);rows.push(r)}
- const h=rows.shift().map(x=>x.trim().replace(/^\uFEFF/,''));
- return rows.filter(r=>r.some(x=>x.trim())).map(r=>Object.fromEntries(h.map((k,i)=>[k,(r[i]||'').trim()])))}
-const num=v=>{v=String(v||'').replace(/,/g,'');return v===''||isNaN(v)?null:+v};
-async function loadData(){
- if(!SHEETS.rooms)return;
- try{
-  const g=async u=>csv(await (await fetch(u)).text());
-  const [rm,rd,ex]=await Promise.all([g(SHEETS.rooms),g(SHEETS.rounds),g(SHEETS.expenses)]);
-  rm.sort((a,b)=>a.room-b.room);
-  const info=k=>rd.find(x=>+x.round===k)||{};
-  P=rm.map(x=>+x.people);
-  RATE=[1,2,3].map(k=>+info(k).rate||RATE[k-1]);
-  BANK_VERIFIED=[1,2,3].map(k=>['yes','ใช่','y'].includes((info(k).bank_verified||'').toLowerCase()));
-  ROUNDS=[1,2,3].map(k=>({date:info(k).date||'-',time:info(k).time||'-',amt:rm.map(x=>num(x['r'+k+'_amount'])),st:rm.map(x=>x['r'+k+'_status'])}));
-  EXPENSES=ex.map(x=>({d:x.date,n:x.name,paid:num(x.paid)||0}));
-  recalc();
- }catch(e){console.warn('โหลด Google Sheets ไม่สำเร็จ ใช้ข้อมูลสำรองในไฟล์',e)}}
-const noSb=()=>!CONFIG.supabaseUrl?'config.js ยังว่าง: ยังไม่ได้ Commit หรือเบราว์เซอร์จำไฟล์เก่า':'โหลดไลบรารี Supabase ไม่ได้: ปิดตัวบล็อกโฆษณาหรือเปลี่ยนเครือข่ายแล้วลองใหม่';
-const sb=(CONFIG.supabaseUrl&&window.supabase)?supabase.createClient(CONFIG.supabaseUrl,CONFIG.supabaseKey):null;
-const email=async u=>'h'+(await hash(u)).slice(0,32)+'@tup44.app';
-const setSession=u=>{session={user:u.user_metadata.username,room:+u.user_metadata.room}};
-// ===== หน้าต่างๆ =====
-function home(){app.innerHTML=`<section class="hero"><div class="crest" aria-hidden="true">🌸</div><h1 class="title">TUP 44</h1><div class="script">Farewell</div><p>TRIAMUDOMSAKKAPATANAKRAN SCHOOL</p><button class="btn" id="go">เข้าสู่ระบบ</button></section>`;$('#go').onclick=()=>go(session?'dash':'login')}
-function login(){app.innerHTML=`<div class="hero" style="padding-bottom:0"><div class="script" style="font-size:clamp(52px,12vw,90px)">Welcome back</div><p>TUP 44 FAREWELL</p></div>
-<div class="panel"><label for="u">ชื่อผู้ใช้งาน</label><input type="text" id="u" autocomplete="username"><label for="p">รหัสผ่าน</label><input type="password" id="p" autocomplete="current-password"><div class="msg" id="m" role="alert"></div>
-<div class="alt">เข้าใช้ครั้งแรก - <a role="button" tabindex="0" id="reg">ลงทะเบียนเข้าใช้</a></div><button class="btn" id="ok" style="width:100%">เข้าสู่ระบบ</button></div>`;
- $('#reg').onclick=()=>go('register');
- $('#ok').onclick=async()=>{const u=$('#u').value.trim(),m=$('#m');
-  if(!sb)return m.textContent=noSb();
-  m.textContent='กำลังเข้าสู่ระบบ...';
-  const{data,error}=await sb.auth.signInWithPassword({email:await email(u),password:$('#p').value});
-  if(error)return m.textContent='ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง';
-  setSession(data.user);go('dash')}}
-function register(){app.innerHTML=`<div class="hero" style="padding-bottom:0"><div class="script" style="font-size:clamp(52px,12vw,90px)">First time in</div><p>TUP 44 FAREWELL</p></div>
-<div class="panel"><label for="u">ชื่อผู้ใช้งาน</label><input type="text" id="u" placeholder="เช่น สมชาย_6/1"><label for="p">รหัสผ่าน</label><input type="password" id="p"><label for="c">ยืนยันรหัสผ่าน</label><input type="password" id="c"><div class="msg" id="m" role="alert"></div><button class="btn" id="ok" style="width:100%">ลงทะเบียน</button><div class="alt"><a role="button" tabindex="0" id="back">กลับไปหน้าเข้าสู่ระบบ</a></div></div>`;
- $('#back').onclick=()=>go('login');
- $('#ok').onclick=async()=>{const u=$('#u').value.trim(),p=$('#p').value,m=$('#m');
-  if(!sb)return m.textContent=noSb();
-  if(!roomOf(u))return m.textContent='ชื่อผู้ใช้ต้องลงท้ายด้วย _6/ตามด้วยเลขห้อง 1–20 เช่น สมชาย_6/1';
-  if(p.length<6)return m.textContent='รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร';
-  if(p!==$('#c').value)return m.textContent='รหัสผ่านและการยืนยันไม่ตรงกัน';
-  m.textContent='กำลังลงทะเบียน...';
-  const{data,error}=await sb.auth.signUp({email:await email(u),password:p,options:{data:{username:u,room:String(roomOf(u))}}});
-  if(error)return m.textContent=/registered/i.test(error.message)?'ชื่อผู้ใช้นี้ถูกใช้แล้ว':'ลงทะเบียนไม่สำเร็จ: '+error.message;
-  if(!data.session)return m.textContent='ยังล็อกอินไม่ได้ ต้องปิด Confirm email ใน Supabase';
-  setSession(data.user);go('dash')}}
-let tab=2;
-function tableHTML(k){const r=ROUNDS[k];
- let h=`<div style="text-align:center;font-size:14px">${CLOSED[k]}<br>ยอดเงินงานปัจฉิมรอบที่ ${k+1} (${r.date}) อัปเดตเวลา ${r.time} น.</div><div class="tw"><table><thead><tr><th>ห้อง</th><th>จำนวน (คน)</th><th>ยอดเงิน (บาท)</th><th>สถานะ</th></tr></thead><tbody>`;
- P.forEach((p,i)=>{const s=status(k,i),a=r.amt[i];
-  const lb=s.c==='ok'?'ตรวจสอบแล้ว (ครบถ้วน)':s.c==='bad'?`ตรวจสอบแล้ว (ขาด ${Math.round((p*RATE[k]-a)/RATE[k])} คน)`:'ยังไม่มียอด';
-  h+=`<tr><td>ม.6/${i+1}</td><td>${p}</td><td>${a==null?'-':fmt(a)}</td><td><span class="dot ${s.c}"></span>${lb}</td></tr>`});
- return h+`</tbody><tfoot><tr><td colspan="4">ยอดรวม จำนวน ${Math.round(sum(r.amt)/RATE[k])} คน ยอดเงิน ${fmt(income[k])} บาท [${BANK[k]}]</td></tr></tfoot></table></div>`}
-function dash(){app.innerHTML=`<div class="hero" style="padding:20px 0 0"><h1 class="title" style="font-size:clamp(40px,9vw,64px);margin:0">TUP 44 <span class="script" style="font-size:1.3em">Farewell</span></h1></div>
-<div class="grid">
-<div class="box"><h2>รายรับ</h2>${ROUNDS.map((r,i)=>`<div class="row"><span>รอบที่ ${i+1} (${r.date})${BANK_VERIFIED[i]?'':' *'}</span><b>${fmt(income[i])}</b></div>`).join('')}<div class="row"><b>รวม</b><b>${fmt(totalIn)} บาท</b></div><div class="note">* ยังไม่ได้ตรวจสอบกับยอดธนาคาร</div></div>
-<div class="box"><h2>รายจ่าย</h2>${EXPENSES.map(e=>`<div class="row"><span>${e.d} ${e.n}<br><small>ราคา ${fmt(e.unit)} x ${e.qty} หน่วย = ${fmt(e.unit*e.qty)} · มัดจำ</small></span><b>${fmt(e.paid)}</b></div>`).join('')}<div class="row"><b>รวม</b><b>${fmt(totalOut)} บาท</b></div><div class="note">${EXP_NOTE}</div></div>
-<div class="box wide"><h2>ยอดคงเหลือ</h2><div class="big">${fmt(balance)} บาท</div><div class="note" style="text-align:center">ยอดหลังรอบที่ 2 ที่ตรวจตรงกับธนาคารแล้ว: ${fmt(income[0]+income[1]-totalOut)} บาท</div></div></div>
-<div class="box wide" style="margin-top:38px"><h2>ยอดเงินทุกห้อง</h2><div class="tabs">${ROUNDS.map((_,k)=>`<button data-t="${k}" class="${k===tab?'on':''}">รอบที่ ${k+1}</button>`).join('')}</div>${tableHTML(tab)}</div>
-<div class="center"><button class="btn" id="r">ยอดเงินของห้อง</button></div>`;$('#r').onclick=()=>go('room');
- document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{tab=+b.dataset.t;dash()})}
-function room(){const i=session.room-1;
- if(!session.room){app.innerHTML=`<div class="panel"><p>ไม่พบเลขห้องในชื่อผู้ใช้</p><button class="btn" id="b">กลับหน้าหลัก</button></div>`;$('#b').onclick=()=>go('dash');return}
- const cards=ROUNDS.map((r,k)=>{const s=status(k,i),a=r.amt[i];return`<div class="rd"><div class="box"><h2>ยอดครั้งที่ ${k+1}</h2><div class="amt">${a==null?'-':fmt(a)}</div><div class="st"><span class="dot ${s.c}"></span>${s.t}</div></div><button class="btn sm" data-k="${k}">อัปโหลดสลิป</button><input type="file" accept="image/*,.pdf" hidden data-f="${k}"><div class="fn" id="fn${k}">${slips[k]?'อัปโหลดแล้ว: '+slips[k]:''}</div></div>`}).join('');
- const paid=sum(ROUNDS.map(r=>r.amt[i])),exp=P[i]*sum(RATE);
- app.innerHTML=`<h1 class="room">M.6/${session.room}</h1><div class="legend"><span><i class="dot ok"></i>ครบถ้วน</span><span><i class="dot wait"></i>รอการตรวจสอบ</span><span><i class="dot bad"></i>ไม่ครบถ้วน</span></div>
-<div class="rounds">${cards}</div>
-<div class="rd total" style="margin-top:34px"><div class="box"><h2>ยอดรวมทั้งหมด</h2><div class="amt">${fmt(paid)} บาท</div><div class="st">จากยอดที่ต้องชำระครบ 3 รอบ ${fmt(exp)} บาท (${P[i]} คน)</div></div></div>
-<div class="center"><button class="btn" id="b">กลับหน้าหลัก</button></div>`;
- $('#b').onclick=()=>go('dash');
- document.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>document.querySelector(`[data-f="${b.dataset.k}"]`).click());
- document.querySelectorAll('[data-f]').forEach(f=>f.onchange=async()=>{const k=+f.dataset.f,file=f.files[0],fn=$('#fn'+k);if(!file)return;
-  if(!sb){fn.textContent=noSb();return}
-  if(file.size>5*1024*1024){fn.textContent='ไฟล์ใหญ่เกิน 5 MB';return}
-  fn.textContent='กำลังอัปโหลด...';
-  const ext=(file.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'')||'jpg';
-  const{error}=await sb.storage.from('slips').upload(`${session.room}/${k+1}/${Date.now()}.${ext}`,file,{contentType:file.type});
-  if(error){fn.textContent='อัปโหลดไม่สำเร็จ ลองใหม่อีกครั้ง';return}
-  slips[k]=file.name;fn.textContent='อัปโหลดสำเร็จ: '+file.name})}
-(async()=>{await loadData();if(sb){const{data}=await sb.auth.getSession();if(data.session)setSession(data.session.user)}go(session?'dash':'home')})();
+window.supabase || document.write(
+  '<script src="https://unpkg.com/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"><\/script>'
+);
 </script>
+
+<script src="config.js"></script>
+
+<script>
+
+/* =========================================================
+   ข้อมูลสำรอง
+========================================================= */
+
+let P = [
+  28,25,26,39,38,27,34,33,36,36,
+  35,36,36,36,40,28,31,38,37,33
+];
+
+let RATE = [500,350,350];
+
+let ROUNDS = [
+  {
+    date:"23/07/2569",
+    time:"08:15",
+    amt:P.map(p=>p*500)
+  },
+  {
+    date:"05/09/2569",
+    time:"11:20",
+    amt:P.map(p=>p*350)
+  },
+  {
+    date:"27/09/2569",
+    time:"15:45",
+    amt:[
+      9800,8750,9100,13650,13300,
+      9450,11900,null,12600,12600,
+      12250,12600,11550,12600,14000,
+      null,10850,13300,12950,null
+    ]
+  }
+];
+
+let BANK_VERIFIED = [true,true,false];
+
+const BANK = [
+  "ตรวจสอบแล้ว (ยอดตรงกับธนาคาร)",
+  "ตรวจสอบแล้ว (ยอดตรงกับธนาคาร)",
+  "ยังไม่ได้ตรวจสอบกับยอดธนาคาร"
+];
+
+const CLOSED = [
+  "ปิดยอดครั้งที่ 1",
+  "ปิดยอดครั้งที่ 2",
+  "อยู่ระหว่างเก็บยอดครั้งที่ 3"
+];
+
+let EXPENSES = [
+  {
+    d:"17/08/2569",
+    n:"โฟโต้บูธ",
+    unit:7500,
+    qty:2,
+    paid:5000
+  },
+  {
+    d:"04-05/09/2569",
+    n:"วงดนตรี (SCRUBB)",
+    unit:120000,
+    qty:1,
+    paid:60000
+  }
+];
+
+const EXP_NOTE =
+  "โอนค่าวงดนตรีงวดที่ 1 เป็น 2 รอบ รอบละ 30,000 บาท เพราะธนาคารจำกัดโอนไม่เกิน 50,000 บาท/วัน";
+
+
+/* =========================================================
+   ตัวช่วย
+========================================================= */
+
+const $ = s => document.querySelector(s);
+const app = $("#app");
+
+const fmt = n =>
+  Number(n || 0).toLocaleString("en-US");
+
+const sum = a =>
+  a.reduce((x,y)=>x+(Number(y)||0),0);
+
+const MAP = {
+  "ครบถ้วน":"ok",
+  "รอการตรวจสอบ":"wait",
+  "ไม่ครบถ้วน":"bad"
+};
+
+const LBL = {
+  ok:"ครบถ้วน",
+  wait:"รอการตรวจสอบ",
+  bad:"ไม่ครบถ้วน"
+};
+
+
+/* =========================================================
+   คำนวณสถานะ
+========================================================= */
+
+function status(r,i){
+
+  const R = ROUNDS[r];
+
+  const a = R.amt[i];
+
+  const need = P[i] * RATE[r];
+
+  let c =
+    MAP[R.st && R.st[i]] ||
+    (a == null
+      ? "wait"
+      : a < need
+        ? "bad"
+        : "ok"
+    );
+
+  return {
+    c,
+    t:
+      LBL[c] +
+      (
+        c==="bad" &&
+        a!=null &&
+        a<need
+          ? " (ขาด " +
+            Math.round((need-a)/RATE[r]) +
+            " คน)"
+          : ""
+      )
+  };
+}
+
+
+/* =========================================================
+   คำนวณยอดรวม
+========================================================= */
+
+let income = [];
+let totalIn = 0;
+let totalOut = 0;
+let balance = 0;
+
+function recalc(){
+
+  income = ROUNDS.map(
+    r => sum(r.amt)
+  );
+
+  totalIn = sum(income);
+
+  totalOut = sum(
+    EXPENSES.map(e => e.paid)
+  );
+
+  balance = totalIn - totalOut;
+}
+
+
+/* =========================================================
+   Local Storage
+========================================================= */
+
+const store = {
+
+  get(k){
+    try{
+      return JSON.parse(
+        localStorage.getItem(k)
+      );
+    }catch(e){
+      return null;
+    }
+  },
+
+  set(k,v){
+    try{
+      localStorage.setItem(
+        k,
+        JSON.stringify(v)
+      );
+    }catch(e){}
+  },
+
+  del(k){
+    try{
+      localStorage.removeItem(k);
+    }catch(e){}
+  }
+
+};
+
+
+/* =========================================================
+   SHA-256
+========================================================= */
+
+async function hash(s){
+
+  const b =
+    await crypto.subtle.digest(
+      "SHA-256",
+      new TextEncoder().encode(s)
+    );
+
+  return [
+    ...new Uint8Array(b)
+  ]
+  .map(
+    x => x.toString(16).padStart(2,"0")
+  )
+  .join("");
+}
+
+
+/* =========================================================
+   ตรวจห้อง
+========================================================= */
+
+const roomOf = u => {
+
+  const m =
+    /_6\/(\d{1,2})$/.exec(
+      u.trim()
+    );
+
+  return
+    m &&
+    +m[1]>=1 &&
+    +m[1]<=20
+      ? +m[1]
+      : null;
+};
+
+
+/* =========================================================
+   Session
+========================================================= */
+
+let session = null;
+
+let slips = {};
+
+function who(){
+
+  $("#who").innerHTML =
+    session
+      ? `ห้อง ม.6/${session.room}
+         <a role="button"
+            tabindex="0"
+            id="out">
+            ออกจากระบบ
+         </a>`
+      : "";
+
+  if(session){
+
+    $("#out").onclick = async ()=>{
+
+      if(sb){
+        await sb.auth.signOut();
+      }
+
+      session = null;
+
+      go("home");
+    };
+  }
+}
+
+
+/* =========================================================
+   เปลี่ยนหน้า
+========================================================= */
+
+function go(v){
+
+  who();
+
+  if(
+    !session &&
+    (v==="dash" || v==="room")
+  ){
+    login();
+    return;
+  }
+
+  const pages = {
+    home,
+    login,
+    register,
+    dash,
+    room
+  };
+
+  if(pages[v]){
+    pages[v]();
+  }
+
+  window.scrollTo(0,0);
+}
+
+
+/* =========================================================
+   Google Sheets
+========================================================= */
+
+const SHEETS =
+  CONFIG &&
+  CONFIG.sheets
+    ? CONFIG.sheets
+    : {};
+
+
+/* =========================================================
+   CSV Parser
+========================================================= */
+
+function csv(t){
+
+  const rows = [];
+
+  let r = [];
+  let c = "";
+  let q = false;
+
+  for(
+    let i=0;
+    i<t.length;
+    i++
+  ){
+
+    const ch = t[i];
+
+    if(q){
+
+      if(
+        ch === '"' &&
+        t[i+1] === '"'
+      ){
+
+        c += '"';
+        i++;
+
+      }else if(ch === '"'){
+
+        q = false;
+
+      }else{
+
+        c += ch;
+      }
+
+    }else if(ch === '"'){
+
+      q = true;
+
+    }else if(ch === ','){
+
+      r.push(c);
+      c = "";
+
+    }else if(
+      ch === '\n' ||
+      ch === '\r'
+    ){
+
+      if(
+        ch === '\r' &&
+        t[i+1] === '\n'
+      ){
+        i++;
+      }
+
+      r.push(c);
+      c = "";
+
+      rows.push(r);
+      r = [];
+
+    }else{
+
+      c += ch;
+    }
+  }
+
+  if(c || r.length){
+
+    r.push(c);
+    rows.push(r);
+  }
+
+  if(!rows.length){
+    return [];
+  }
+
+  const h =
+    rows
+      .shift()
+      .map(
+        x =>
+          x
+            .trim()
+            .replace(/^\uFEFF/,"")
+      );
+
+  return rows
+    .filter(
+      r =>
+        r.some(
+          x => x.trim()
+        )
+    )
+    .map(
+      r =>
+        Object.fromEntries(
+          h.map(
+            (k,i) =>
+              [
+                k,
+                (r[i] || "").trim()
+              ]
+          )
+        )
+    );
+}
+
+
+/* =========================================================
+   แปลงตัวเลข
+========================================================= */
+
+const num = v => {
+
+  v = String(v || "")
+    .replace(/,/g,"")
+    .trim();
+
+  return
+    v === "" || isNaN(v)
+      ? null
+      : +v;
+};
+
+
+/* =========================================================
+   โหลด Google Sheets
+========================================================= */
+
+async function loadData(){
+
+  if(!SHEETS.rooms){
+    console.warn(
+      "ไม่ได้ตั้งค่า Google Sheets"
+    );
+    return;
+  }
+
+  try{
+
+    const g = async u => {
+
+      const response =
+        await fetch(u);
+
+      if(!response.ok){
+
+        throw new Error(
+          `HTTP ${response.status}`
+        );
+      }
+
+      const text =
+        await response.text();
+
+      if(
+        text.includes("<html") ||
+        text.includes("<!DOCTYPE")
+      ){
+
+        throw new Error(
+          "Google Sheets ไม่ได้ส่งข้อมูล CSV"
+        );
+      }
+
+      return csv(text);
+    };
+
+
+    const [
+      rm,
+      rd,
+      ex
+    ] = await Promise.all([
+
+      g(SHEETS.rooms),
+      g(SHEETS.rounds),
+      g(SHEETS.expenses)
+
+    ]);
+
+
+    if(!rm.length){
+
+      throw new Error(
+        "ไม่พบข้อมูลห้องใน Google Sheets"
+      );
+    }
+
+
+    rm.sort(
+      (a,b) =>
+        Number(a.room) -
+        Number(b.room)
+    );
+
+
+    const info = k =>
+      rd.find(
+        x => +x.round === k
+      ) || {};
+
+
+    P = rm.map(
+      x => +x.people || 0
+    );
+
+
+    RATE = [1,2,3].map(
+      k =>
+        +info(k).rate ||
+        RATE[k-1]
+    );
+
+
+    BANK_VERIFIED =
+      [1,2,3].map(
+        k =>
+          [
+            "yes",
+            "ใช่",
+            "y",
+            "true",
+            "1"
+          ].includes(
+            String(
+              info(k).bank_verified || ""
+            ).toLowerCase()
+          )
+      );
+
+
+    ROUNDS =
+      [1,2,3].map(
+        k => ({
+
+          date:
+            info(k).date || "-",
+
+          time:
+            info(k).time || "-",
+
+          amt:
+            rm.map(
+              x =>
+                num(
+                  x[`r${k}_amount`]
+                )
+            ),
+
+          st:
+            rm.map(
+              x =>
+                x[`r${k}_status`]
+            )
+
+        })
+      );
+
+
+    EXPENSES =
+      ex.map(
+        x => ({
+
+          d:
+            x.date || "-",
+
+          n:
+            x.name || "-",
+
+          unit:
+            num(x.unit) || 0,
+
+          qty:
+            num(x.qty) || 0,
+
+          paid:
+            num(x.paid) || 0
+
+        })
+      );
+
+
+    recalc();
+
+
+    console.log(
+      "โหลด Google Sheets สำเร็จ"
+    );
+
+    console.log(
+      "Rooms:",
+      rm
+    );
+
+    console.log(
+      "Rounds:",
+      rd
+    );
+
+    console.log(
+      "Expenses:",
+      ex
+    );
+
+
+  }catch(e){
+
+    console.error(
+      "โหลด Google Sheets ไม่สำเร็จ:",
+      e
+    );
+
+    alert(
+      "ไม่สามารถโหลดข้อมูลจาก Google Sheets ได้\n\n" +
+      "ระบบจะใช้ข้อมูลสำรองในเว็บไซต์แทน\n\n" +
+      "รายละเอียด: " +
+      e.message
+    );
+  }
+}
+
+
+/* =========================================================
+   Supabase
+========================================================= */
+
+const noSb = () =>
+  !CONFIG.supabaseUrl
+    ? "config.js ยังไม่มี Supabase URL"
+    : !CONFIG.supabaseKey
+      ? "config.js ยังไม่มี Supabase Key"
+      : "โหลด Supabase ไม่สำเร็จ";
+
+
+const sb =
+  (
+    CONFIG.supabaseUrl &&
+    CONFIG.supabaseKey &&
+    window.supabase
+  )
+    ? window.supabase.createClient(
+        CONFIG.supabaseUrl,
+        CONFIG.supabaseKey
+      )
+    : null;
+
+
+/* =========================================================
+   สร้าง Email จาก username
+========================================================= */
+
+const email = async u =>
+  "h" +
+  (await hash(u)).slice(0,32) +
+  "@tup44.app";
+
+
+/* =========================================================
+   Session จาก Supabase
+========================================================= */
+
+const setSession = u => {
+
+  if(!u) return;
+
+  session = {
+
+    user:
+      u.user_metadata &&
+      u.user_metadata.username
+        ? u.user_metadata.username
+        : u.email,
+
+    room:
+      Number(
+        u.user_metadata &&
+        u.user_metadata.room
+      ) || null
+
+  };
+};
+
+
+/* =========================================================
+   หน้า Home
+========================================================= */
+
+function home(){
+
+  app.innerHTML = `
+
+  <section class="hero">
+
+    <div class="crest">
+      🌸
+    </div>
+
+    <h1 class="title">
+      TUP 44
+    </h1>
+
+    <div class="script">
+      Farewell
+    </div>
+
+    <p>
+      TRIAMUDOMSAKKAPATANAKRAN SCHOOL
+    </p>
+
+    <button
+      class="btn"
+      id="go">
+      เข้าสู่ระบบ
+    </button>
+
+  </section>
+
+  `;
+
+  $("#go").onclick =
+    () =>
+      go(
+        session
+          ? "dash"
+          : "login"
+      );
+}
+
+
+/* =========================================================
+   Login
+========================================================= */
+
+function login(){
+
+  app.innerHTML = `
+
+  <div
+    class="hero"
+    style="padding-bottom:0">
+
+    <div
+      class="script"
+      style="font-size:clamp(52px,12vw,90px)">
+      Welcome back
+    </div>
+
+    <p>
+      TUP 44 FAREWELL
+    </p>
+
+  </div>
+
+
+  <div class="panel">
+
+    <label for="u">
+      ชื่อผู้ใช้งาน
+    </label>
+
+    <input
+      type="text"
+      id="u"
+      autocomplete="username">
+
+
+    <label for="p">
+      รหัสผ่าน
+    </label>
+
+    <input
+      type="password"
+      id="p"
+      autocomplete="current-password">
+
+
+    <div
+      class="msg"
+      id="m"
+      role="alert">
+    </div>
+
+
+    <div class="alt">
+      เข้าใช้ครั้งแรก -
+      <a
+        role="button"
+        tabindex="0"
+        id="reg">
+        ลงทะเบียนเข้าใช้
+      </a>
+    </div>
+
+
+    <button
+      class="btn"
+      id="ok"
+      style="width:100%">
+      เข้าสู่ระบบ
+    </button>
+
+  </div>
+
+  `;
+
+
+  $("#reg").onclick =
+    () => go("register");
+
+
+  $("#ok").onclick =
+    async () => {
+
+      const u =
+        $("#u").value.trim();
+
+      const p =
+        $("#p").value;
+
+      const m =
+        $("#m");
+
+
+      if(!u || !p){
+
+        m.textContent =
+          "กรุณากรอกชื่อผู้ใช้งานและรหัสผ่าน";
+
+        return;
+      }
+
+
+      if(!sb){
+
+        m.textContent =
+          noSb();
+
+        return;
+      }
+
+
+      m.textContent =
+        "กำลังเข้าสู่ระบบ...";
+
+
+      try{
+
+        const result =
+          await sb.auth.signInWithPassword({
+
+            email:
+              await email(u),
+
+            password:p
+
+          });
+
+
+        const {
+          data,
+          error
+        } = result;
+
+
+        if(error){
+
+          console.error(
+            "Login error:",
+            error
+          );
+
+          m.textContent =
+            "ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง";
+
+          return;
+        }
+
+
+        setSession(
+          data.user
+        );
+
+
+        if(!session.room){
+
+          m.textContent =
+            "บัญชีนี้ไม่มีข้อมูลเลขห้อง";
+
+          return;
+        }
+
+
+        go("dash");
+
+
+      }catch(e){
+
+        console.error(e);
+
+        m.textContent =
+          "เกิดข้อผิดพลาดในการเข้าสู่ระบบ";
+      }
+
+    };
+}
+
+
+/* =========================================================
+   Register
+========================================================= */
+
+function register(){
+
+  app.innerHTML = `
+
+  <div
+    class="hero"
+    style="padding-bottom:0">
+
+    <div
+      class="script"
+      style="font-size:clamp(52px,12vw,90px)">
+      First time in
+    </div>
+
+    <p>
+      TUP 44 FAREWELL
+    </p>
+
+  </div>
+
+
+  <div class="panel">
+
+    <label for="u">
+      ชื่อผู้ใช้งาน
+    </label>
+
+    <input
+      type="text"
+      id="u"
+      placeholder="เช่น สมชาย_6/1">
+
+
+    <label for="p">
+      รหัสผ่าน
+    </label>
+
+    <input
+      type="password"
+      id="p">
+
+
+    <label for="c">
+      ยืนยันรหัสผ่าน
+    </label>
+
+    <input
+      type="password"
+      id="c">
+
+
+    <div
+      class="msg"
+      id="m"
+      role="alert">
+    </div>
+
+
+    <button
+      class="btn"
+      id="ok"
+      style="width:100%">
+      ลงทะเบียน
+    </button>
+
+
+    <div class="alt">
+
+      <a
+        role="button"
+        tabindex="0"
+        id="back">
+        กลับไปหน้าเข้าสู่ระบบ
+      </a>
+
+    </div>
+
+  </div>
+
+  `;
+
+
+  $("#back").onclick =
+    () => go("login");
+
+
+  $("#ok").onclick =
+    async () => {
+
+      const u =
+        $("#u").value.trim();
+
+      const p =
+        $("#p").value;
+
+      const c =
+        $("#c").value;
+
+      const m =
+        $("#m");
+
+
+      if(!sb){
+
+        m.textContent =
+          noSb();
+
+        return;
+      }
+
+
+      const room =
+        roomOf(u);
+
+
+      if(!room){
+
+        m.textContent =
+          "ชื่อผู้ใช้ต้องลงท้ายด้วย _6/ตามด้วยเลขห้อง 1–20 เช่น สมชาย_6/1";
+
+        return;
+      }
+
+
+      if(p.length < 6){
+
+        m.textContent =
+          "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร";
+
+        return;
+      }
+
+
+      if(p !== c){
+
+        m.textContent =
+          "รหัสผ่านและการยืนยันไม่ตรงกัน";
+
+        return;
+      }
+
+
+      m.textContent =
+        "กำลังลงทะเบียน...";
+
+
+      try{
+
+        const {
+          data,
+          error
+        } =
+          await sb.auth.signUp({
+
+            email:
+              await email(u),
+
+            password:p,
+
+            options:{
+
+              data:{
+
+                username:u,
+
+                room:String(room)
+
+              }
+
+            }
+
+          });
+
+
+        if(error){
+
+          console.error(
+            "Register error:",
+            error
+          );
+
+          if(
+            /already registered|already been registered|registered/i
+              .test(error.message)
+          ){
+
+            m.textContent =
+              "ชื่อผู้ใช้นี้ถูกใช้แล้ว";
+
+          }else{
+
+            m.textContent =
+              "ลงทะเบียนไม่สำเร็จ: " +
+              error.message;
+          }
+
+          return;
+        }
+
+
+        if(!data.session){
+
+          m.textContent =
+            "ลงทะเบียนสำเร็จ แต่ต้องยืนยันอีเมลก่อนเข้าสู่ระบบ หากต้องการให้เข้าได้ทันที ให้ปิด Confirm email ใน Supabase Authentication";
+
+          return;
+        }
+
+
+        setSession(
+          data.user
+        );
+
+        go("dash");
+
+
+      }catch(e){
+
+        console.error(e);
+
+        m.textContent =
+          "เกิดข้อผิดพลาดในการลงทะเบียน";
+      }
+
+    };
+}
+
+
+/* =========================================================
+   ตารางข้อมูล
+========================================================= */
+
+let tab = 2;
+
+
+function tableHTML(k){
+
+  const r =
+    ROUNDS[k];
+
+
+  let h = `
+
+  <div
+    style="text-align:center;font-size:14px">
+
+    ${CLOSED[k]}
+
+    <br>
+
+    ยอดเงินงานปัจฉิมรอบที่
+    ${k+1}
+    (${r.date})
+
+    อัปเดตเวลา
+    ${r.time}
+    น.
+
+  </div>
+
+
+  <div class="tw">
+
+  <table>
+
+    <thead>
+
+      <tr>
+
+        <th>ห้อง</th>
+
+        <th>จำนวน (คน)</th>
+
+        <th>ยอดเงิน (บาท)</th>
+
+        <th>สถานะ</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+  `;
+
+
+  P.forEach(
+    (p,i) => {
+
+      const s =
+        status(k,i);
+
+      const a =
+        r.amt[i];
+
+
+      const lb =
+        s.c === "ok"
+          ? "ตรวจสอบแล้ว (ครบถ้วน)"
+          : s.c === "bad"
+            ? `ตรวจสอบแล้ว (ขาด ${
+                Math.round(
+                  (p*RATE[k]-a) /
+                  RATE[k]
+                )
+              } คน)`
+            : "ยังไม่มียอด";
+
+
+      h += `
+
+      <tr>
+
+        <td>
+          ม.6/${i+1}
+        </td>
+
+        <td>
+          ${p}
+        </td>
+
+        <td>
+          ${a==null ? "-" : fmt(a)}
+        </td>
+
+        <td>
+
+          <span
+            class="dot ${s.c}">
+          </span>
+
+          ${lb}
+
+        </td>
+
+      </tr>
+
+      `;
+    }
+  );
+
+
+  h += `
+
+    </tbody>
+
+    <tfoot>
+
+      <tr>
+
+        <td colspan="4">
+
+          ยอดรวม
+          จำนวน
+          ${Math.round(
+            sum(r.amt) /
+            RATE[k]
+          )}
+          คน
+
+          ยอดเงิน
+          ${fmt(income[k])}
+          บาท
+
+          [
+          ${BANK[k]}
+          ]
+
+        </td>
+
+      </tr>
+
+    </tfoot>
+
+  </table>
+
+  </div>
+
+  `;
+
+
+  return h;
+}
+
+
+/* =========================================================
+   Dashboard
+========================================================= */
+
+function dash(){
+
+  recalc();
+
+
+  app.innerHTML = `
+
+  <div
+    class="hero"
+    style="padding:20px 0 0">
+
+    <h1
+      class="title"
+      style="
+        font-size:clamp(40px,9vw,64px);
+        margin:0">
+
+      TUP 44
+
+      <span
+        class="script"
+        style="font-size:1.3em">
+        Farewell
+      </span>
+
+    </h1>
+
+  </div>
+
+
+  <div class="grid">
+
+
+    <div class="box">
+
+      <h2>
+        รายรับ
+      </h2>
+
+
+      ${ROUNDS.map(
+        (r,i) => `
+
+        <div class="row">
+
+          <span>
+
+            รอบที่
+            ${i+1}
+            (${r.date})
+
+            ${BANK_VERIFIED[i]
+              ? ""
+              : " *"
+            }
+
+          </span>
+
+          <b>
+            ${fmt(income[i])}
+          </b>
+
+        </div>
+
+        `
+      ).join("")}
+
+
+      <div class="row">
+
+        <b>
+          รวม
+        </b>
+
+        <b>
+          ${fmt(totalIn)}
+          บาท
+        </b>
+
+      </div>
+
+
+      <div class="note">
+
+        * ยังไม่ได้ตรวจสอบกับยอดธนาคาร
+
+      </div>
+
+    </div>
+
+
+    <div class="box">
+
+      <h2>
+        รายจ่าย
+      </h2>
+
+
+      ${
+        EXPENSES.length
+          ? EXPENSES.map(
+              e => `
+
+              <div class="row">
+
+                <span>
+
+                  ${e.d}
+                  ${e.n}
+
+                  <br>
+
+                  <small>
+
+                    ราคา
+                    ${fmt(e.unit)}
+                    x
+                    ${e.qty}
+                    หน่วย
+
+                    =
+                    ${fmt(
+                      e.unit * e.qty
+                    )}
+
+                    · มัดจำ
+
+                  </small>
+
+                </span>
+
+                <b>
+                  ${fmt(e.paid)}
+                </b>
+
+              </div>
+
+              `
+            ).join("")
+          : `
+            <div class="note">
+              ยังไม่มีข้อมูลรายจ่าย
+            </div>
+          `
+      }
+
+
+      <div class="row">
+
+        <b>
+          รวม
+        </b>
+
+        <b>
+          ${fmt(totalOut)}
+          บาท
+        </b>
+
+      </div>
+
+
+      <div class="note">
+
+        ${EXP_NOTE}
+
+      </div>
+
+    </div>
+
+
+    <div class="box wide">
+
+      <h2>
+        ยอดคงเหลือ
+      </h2>
+
+      <div class="big">
+        ${fmt(balance)}
+        บาท
+      </div>
+
+      <div
+        class="note"
+        style="text-align:center">
+
+        ยอดหลังรอบที่ 2
+        ที่ตรวจตรงกับธนาคารแล้ว:
+
+        ${fmt(
+          income[0] +
+          income[1] -
+          totalOut
+        )}
+
+        บาท
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="box wide"
+    style="margin-top:38px">
+
+    <h2>
+      ยอดเงินทุกห้อง
+    </h2>
+
+
+    <div class="tabs">
+
+      ${ROUNDS.map(
+        (_,k) => `
+
+        <button
+          data-t="${k}"
+          class="${
+            k===tab
+              ? "on"
+              : ""
+          }">
+
+          รอบที่
+          ${k+1}
+
+        </button>
+
+        `
+      ).join("")}
+
+    </div>
+
+
+    ${tableHTML(tab)}
+
+  </div>
+
+
+  <div class="center">
+
+    <button
+      class="btn"
+      id="r">
+
+      ยอดเงินของห้อง
+
+    </button>
+
+  </div>
+
+  `;
+
+
+  $("#r").onclick =
+    () => go("room");
+
+
+  document
+    .querySelectorAll("[data-t]")
+    .forEach(
+      b =>
+        b.onclick = () => {
+
+          tab =
+            +b.dataset.t;
+
+          dash();
+
+        }
+    );
+}
+
+
+/* =========================================================
+   หน้า Room
+========================================================= */
+
+function room(){
+
+  if(!session || !session.room){
+
+    app.innerHTML = `
+
+    <div class="panel">
+
+      <p>
+        ไม่พบเลขห้องในชื่อผู้ใช้
+      </p>
+
+      <button
+        class="btn"
+        id="b">
+
+        กลับหน้าหลัก
+
+      </button>
+
+    </div>
+
+    `;
+
+    $("#b").onclick =
+      () => go("dash");
+
+    return;
+  }
+
+
+  const i =
+    session.room - 1;
+
+
+  const cards =
+    ROUNDS.map(
+      (r,k) => {
+
+        const s =
+          status(k,i);
+
+        const a =
+          r.amt[i];
+
+
+        return `
+
+        <div class="rd">
+
+          <div class="box">
+
+            <h2>
+              ยอดครั้งที่
+              ${k+1}
+            </h2>
+
+            <div class="amt">
+
+              ${
+                a==null
+                  ? "-"
+                  : fmt(a)
+              }
+
+            </div>
+
+            <div class="st">
+
+              <span
+                class="dot ${s.c}">
+              </span>
+
+              ${s.t}
+
+            </div>
+
+          </div>
+
+
+          <button
+            class="btn sm"
+            data-k="${k}">
+
+            อัปโหลดสลิป
+
+          </button>
+
+
+          <input
+            type="file"
+            accept="image/*,.pdf"
+            hidden
+            data-f="${k}">
+
+
+          <div
+            class="fn"
+            id="fn${k}">
+
+            ${
+              slips[k]
+                ? "อัปโหลดแล้ว: " +
+                  slips[k]
+                : ""
+            }
+
+          </div>
+
+        </div>
+
+        `;
+      }
+    ).join("");
+
+
+  const paid =
+    sum(
+      ROUNDS.map(
+        r => r.amt[i]
+      )
+    );
+
+
+  const exp =
+    P[i] *
+    sum(RATE);
+
+
+  app.innerHTML = `
+
+  <h1 class="room">
+    M.6/${session.room}
+  </h1>
+
+
+  <div class="legend">
+
+    <span>
+      <i class="dot ok"></i>
+      ครบถ้วน
+    </span>
+
+    <span>
+      <i class="dot wait"></i>
+      รอการตรวจสอบ
+    </span>
+
+    <span>
+      <i class="dot bad"></i>
+      ไม่ครบถ้วน
+    </span>
+
+  </div>
+
+
+  <div class="rounds">
+
+    ${cards}
+
+  </div>
+
+
+  <div
+    class="rd total"
+    style="margin-top:34px">
+
+    <div class="box">
+
+      <h2>
+        ยอดรวมทั้งหมด
+      </h2>
+
+      <div class="amt">
+
+        ${fmt(paid)}
+        บาท
+
+      </div>
+
+      <div class="st">
+
+        จากยอดที่ต้องชำระครบ 3 รอบ
+
+        ${fmt(exp)}
+        บาท
+
+        (${P[i]} คน)
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="center">
+
+    <button
+      class="btn"
+      id="b">
+
+      กลับหน้าหลัก
+
+    </button>
+
+  </div>
+
+  `;
+
+
+  $("#b").onclick =
+    () => go("dash");
+
+
+  document
+    .querySelectorAll("[data-k]")
+    .forEach(
+      b =>
+        b.onclick = () => {
+
+          const f =
+            document.querySelector(
+              `[data-f="${b.dataset.k}"]`
+            );
+
+          if(f){
+            f.click();
+          }
+
+        }
+    );
+
+
+  document
+    .querySelectorAll("[data-f]")
+    .forEach(
+      f => {
+
+        f.onchange =
+          async () => {
+
+            const k =
+              +f.dataset.f;
+
+            const file =
+              f.files[0];
+
+            const fn =
+              $("#fn"+k);
+
+
+            if(!file){
+              return;
+            }
+
+
+            if(!sb){
+
+              fn.textContent =
+                noSb();
+
+              return;
+            }
+
+
+            if(
+              file.size >
+              5 * 1024 * 1024
+            ){
+
+              fn.textContent =
+                "ไฟล์ใหญ่เกิน 5 MB";
+
+              return;
+            }
+
+
+            fn.textContent =
+              "กำลังอัปโหลด...";
+
+
+            const ext =
+              (
+                file.name
+                  .split(".")
+                  .pop() ||
+                "jpg"
+              )
+              .toLowerCase()
+              .replace(
+                /[^a-z0-9]/g,
+                ""
+              ) ||
+              "jpg";
+
+
+            const path =
+              `${session.room}/${k+1}/${Date.now()}.${ext}`;
+
+
+            try{
+
+              const {
+                error
+              } =
+                await sb
+                  .storage
+                  .from("slips")
+                  .upload(
+                    path,
+                    file,
+                    {
+                      contentType:
+                        file.type ||
+                        "application/octet-stream",
+
+                      upsert:false
+                    }
+                  );
+
+
+              if(error){
+
+                console.error(
+                  "Upload error:",
+                  error
+                );
+
+                fn.textContent =
+                  "อัปโหลดไม่สำเร็จ: " +
+                  error.message;
+
+                return;
+              }
+
+
+              slips[k] =
+                file.name;
+
+
+              store.set(
+                `slip_${session.room}_${k+1}`,
+                {
+                  name:file.name,
+                  path:path,
+                  uploadedAt:
+                    new Date().toISOString()
+                }
+              );
+
+
+              fn.textContent =
+                "อัปโหลดสำเร็จ: " +
+                file.name;
+
+
+            }catch(e){
+
+              console.error(e);
+
+              fn.textContent =
+                "เกิดข้อผิดพลาดในการอัปโหลด";
+
+            }
+
+          };
+
+      }
+    );
+}
+
+
+/* =========================================================
+   เริ่มเว็บไซต์
+========================================================= */
+
+(async()=>{
+
+  recalc();
+
+  await loadData();
+
+
+  if(sb){
+
+    try{
+
+      const {
+        data,
+        error
+      } =
+        await sb.auth.getSession();
+
+
+      if(
+        !error &&
+        data &&
+        data.session
+      ){
+
+        setSession(
+          data.session.user
+        );
+
+      }
+
+    }catch(e){
+
+      console.warn(
+        "อ่าน Session ไม่สำเร็จ:",
+        e
+      );
+
+    }
+
+  }
+
+
+  go(
+    session
+      ? "dash"
+      : "home"
+  );
+
+})();
+
+</script>
+
 </body>
 </html>
