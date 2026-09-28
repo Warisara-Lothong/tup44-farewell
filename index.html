@@ -1,984 +1,537 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TUP 44 Farewell</title>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Prompt:wght@400;500;600&family=Great+Vibes&display=swap"
-  rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mitr:wght@400;500;600&family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* =====================================================
-   THEME
-===================================================== */
-
 :root{
-
-  --bg:#fbeee8;
-  --pink:#f4c8cb;
-  --card:#ffffff;
-  --ink:#4a1010;
-  --mauve:#8b6468;
-  --rose:#b0525f;
-  --line:#cf8a96;
-  --ok:#3f9b3f;
-  --wait:#e6a72c;
-  --bad:#c62a2a;
-  --wrap:#faeee9;
-
+  --bg:#f8e9e5;
+  --pink:#e9aeb7;
+  --pink2:#d98694;
+  --dark:#571d25;
+  --text:#4b2025;
+  --muted:#936d72;
+  --white:#fffafa;
+  --border:#c98691;
+  --green:#4d9b57;
+  --yellow:#dca52f;
+  --red:#c94b4b;
 }
-
-
-/* =====================================================
-   BASIC
-===================================================== */
 
 *{
   box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
-
   margin:0;
-
   min-height:100vh;
-
-  background:var(--bg);
-
-  color:var(--ink);
-
-  font-family:
-    'Prompt',
-    'Noto Sans Thai',
-    sans-serif;
-
-  background-image:
-
-    radial-gradient(
-      circle at 8% 12%,
-      #f7c9d0aa 0 60px,
-      transparent 62px
-    ),
-
-    radial-gradient(
-      circle at 92% 30%,
-      #f7c9d088 0 90px,
-      transparent 92px
-    ),
-
-    radial-gradient(
-      circle at 20% 85%,
-      #f7c9d077 0 70px,
-      transparent 72px
-    );
-
+  font-family:"Prompt",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 10% 10%,#f4cbd0 0 70px,transparent 72px),
+    radial-gradient(circle at 90% 20%,#f2c3ca 0 90px,transparent 92px),
+    radial-gradient(circle at 15% 90%,#f2c7cd 0 80px,transparent 82px),
+    var(--bg);
 }
 
+button,
+input,
+select{
+  font-family:"Prompt",sans-serif;
+}
 
-/* =====================================================
-   TOP BAR
-===================================================== */
-
-.top{
-
+.topbar{
   display:flex;
-
-  align-items:center;
-
   justify-content:space-between;
-
-  padding:16px 22px;
-
+  align-items:center;
+  padding:18px 25px;
 }
 
-
-.brand{
-
-  font-family:'Mitr';
-
-  font-size:22px;
-
-  color:var(--rose);
-
-  text-shadow:
-    2px 2px 0 var(--pink);
-
+.logo{
+  font-family:"Mitr";
+  font-size:24px;
+  font-weight:600;
+  color:var(--pink2);
+  text-shadow:2px 2px #f3cbd0;
 }
 
-
-.brand small{
-
+.logo small{
   display:block;
-
-  font-family:'Prompt';
-
+  font-family:"Prompt";
   font-size:9px;
-
-  letter-spacing:.05em;
-
-  color:var(--ink);
-
+  color:var(--dark);
+  letter-spacing:.08em;
   text-shadow:none;
-
 }
 
-
-.who{
-
+.user-area{
   font-size:13px;
-
-  color:var(--mauve);
-
+  color:var(--muted);
 }
 
-
-.who a{
-
-  color:var(--ink);
-
-  text-decoration:underline;
-
+.user-area a{
   cursor:pointer;
-
+  color:var(--dark);
+  text-decoration:underline;
   margin-left:8px;
-
 }
-
-
-/* =====================================================
-   MAIN
-===================================================== */
 
 main{
-
-  max-width:1000px;
-
+  width:min(1050px,94%);
   margin:auto;
-
-  padding:
-    10px
-    16px
-    60px;
-
+  padding-bottom:60px;
 }
-
-
-/* =====================================================
-   TYPOGRAPHY
-===================================================== */
-
-.title{
-
-  font-family:'Mitr';
-
-  color:var(--rose);
-
-  text-shadow:
-    3px 3px 0 var(--pink),
-    -1px -1px 0 var(--line);
-
-}
-
-
-.script{
-
-  font-family:
-    'Great Vibes',
-    cursive;
-
-  color:var(--rose);
-
-  line-height:1;
-
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
 
 .hero{
-
   text-align:center;
-
-  padding:
-    45px
-    0
-    30px;
-
+  padding:35px 0;
 }
 
-
-.hero .title{
-
-  font-size:
-    clamp(
-      58px,
-      15vw,
-      120px
-    );
-
+.hero h1{
   margin:0;
-
+  font-family:"Mitr";
+  font-size:clamp(60px,15vw,125px);
+  color:var(--pink2);
+  text-shadow:
+    4px 4px #f3cbd0,
+    -1px -1px var(--border);
 }
 
-
-.hero .script{
-
-  font-size:
-    clamp(
-      70px,
-      17vw,
-      150px
-    );
-
-  margin-top:-10px;
-
+.script{
+  font-family:"Great Vibes",cursive;
+  color:var(--pink2);
+  font-size:clamp(70px,16vw,145px);
+  line-height:.8;
 }
-
 
 .hero p{
-
-  font-size:13px;
-
   font-weight:600;
-
-  letter-spacing:.12em;
-
-  margin:
-    12px
-    0
-    30px;
-
+  letter-spacing:.1em;
+  font-size:13px;
 }
-
-
-.crest{
-
-  font-size:55px;
-
-}
-
-
-/* =====================================================
-   BUTTON
-===================================================== */
 
 .btn{
-
-  font-family:'Mitr';
-
-  font-size:19px;
-
-  color:white;
-
-  border:0;
-
+  border:none;
   cursor:pointer;
-
-  padding:
-    13px
-    38px;
-
+  color:white;
+  background:linear-gradient(135deg,#df8f9a,#bb6879);
+  padding:13px 35px;
   min-width:220px;
-
-  background:
-    linear-gradient(
-      #e8949e,
-      #c97d93
-    );
-
-  clip-path:polygon(
-
-    0 8px,
-    8px 0,
-    calc(100% - 8px) 0,
-    100% 8px,
-    100% calc(100% - 8px),
-    calc(100% - 8px) 100%,
-    8px 100%,
-    0 calc(100% - 8px)
-
-  );
-
-  box-shadow:
-    0 8px 16px #c97d9366;
-
+  border-radius:10px;
+  font-size:18px;
+  font-family:"Mitr";
+  box-shadow:0 7px 15px #b86d7b55;
+  transition:.2s;
 }
-
 
 .btn:hover{
-
   transform:translateY(-2px);
-
 }
 
+.btn.secondary{
+  background:white;
+  color:var(--dark);
+  border:2px solid var(--border);
+  box-shadow:none;
+}
 
 .btn.small{
-
   min-width:0;
-
   width:100%;
-
-  font-size:15px;
-
-  padding:
-    9px
-    16px;
-
+  padding:9px 15px;
+  font-size:14px;
 }
-
-
-/* =====================================================
-   LOGIN
-===================================================== */
 
 .panel{
-
-  max-width:440px;
-
-  margin:
-    20px
-    auto;
-
-  padding:28px;
-
-  background:var(--wrap);
-
-  border:
-    2px solid var(--line);
-
+  width:min(470px,100%);
+  margin:20px auto;
+  padding:30px;
+  background:#fff5f2dd;
+  border:2px solid var(--border);
   border-radius:22px;
-
+  box-shadow:0 10px 30px #9e596420;
 }
 
+.panel h2{
+  text-align:center;
+  font-family:"Mitr";
+  color:var(--dark);
+  margin-top:0;
+}
 
 label{
-
   display:block;
-
-  margin:
-    14px
-    0
-    6px;
-
-  font-family:'Mitr';
-
-  color:var(--mauve);
-
+  margin:14px 0 6px;
+  font-weight:500;
+  color:var(--muted);
 }
 
-
-input{
-
+input,
+select{
   width:100%;
-
-  padding:13px 15px;
-
-  border:
-    3px solid var(--line);
-
-  border-radius:14px;
-
-  font-family:'Prompt';
-
-  font-size:16px;
-
-  color:var(--ink);
-
+  padding:12px 14px;
+  border:2px solid var(--border);
+  border-radius:12px;
+  outline:none;
   background:white;
-
+  color:var(--text);
+  font-size:15px;
 }
 
+input:focus,
+select:focus{
+  border-color:var(--pink2);
+}
 
-.login-note{
+.form-buttons{
+  margin-top:20px;
+  display:grid;
+  gap:10px;
+}
 
-  font-size:13px;
-
-  color:var(--mauve);
-
-  margin:
-    12px
-    0
-    18px;
-
+.info{
+  margin:14px 0;
+  padding:12px;
+  border-radius:12px;
+  background:#f7dfe1;
+  font-size:12px;
+  color:var(--muted);
   text-align:center;
-
 }
 
-
-/* =====================================================
-   DASHBOARD GRID
-===================================================== */
+.demo-account{
+  background:#fff;
+  border:1px dashed var(--border);
+  border-radius:14px;
+  padding:13px;
+  text-align:center;
+  font-size:13px;
+  margin-bottom:15px;
+}
 
 .grid{
-
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:38px 20px;
-
   margin-top:30px;
-
 }
-
 
 .box{
-
   position:relative;
-
-  background:var(--card);
-
-  border:
-    3px solid var(--line);
-
+  background:var(--white);
+  border:3px solid var(--border);
   border-radius:20px;
-
-  padding:
-    34px
-    18px
-    18px;
-
+  padding:35px 18px 18px;
 }
-
 
 .box.wide{
-
-  grid-column:1 / -1;
-
+  grid-column:1/-1;
 }
-
 
 .box h2{
-
   position:absolute;
-
   top:-24px;
-
   left:50%;
-
-  transform:
-    translateX(-50%);
-
+  transform:translateX(-50%);
   margin:0;
-
   white-space:nowrap;
-
-  font-family:'Mitr';
-
-  font-size:30px;
-
-  color:var(--rose);
-
-  text-shadow:
-    2px 2px 0 var(--pink);
-
+  font-family:"Mitr";
+  font-size:28px;
+  color:var(--pink2);
+  text-shadow:2px 2px #f4cdd1;
 }
-
 
 .row{
-
   display:flex;
-
   justify-content:space-between;
-
   gap:15px;
-
-  padding:
-    8px
-    0;
-
-  border-bottom:
-    1px dashed var(--line);
-
+  padding:9px 0;
+  border-bottom:1px dashed var(--border);
   font-size:14px;
-
 }
-
 
 .row:last-child{
-
-  border-bottom:0;
-
+  border-bottom:none;
 }
-
-
-.row b{
-
-  white-space:nowrap;
-
-}
-
 
 .big{
-
   text-align:center;
-
-  font-family:'Mitr';
-
-  font-size:
-    clamp(
-      40px,
-      10vw,
-      70px
-    );
-
+  font-family:"Mitr";
+  font-size:clamp(40px,9vw,70px);
+  color:var(--dark);
 }
-
 
 .note{
-
-  color:var(--mauve);
-
   font-size:12px;
-
+  color:var(--muted);
   margin-top:8px;
-
 }
-
-
-/* =====================================================
-   TABS
-===================================================== */
 
 .tabs{
-
   display:flex;
-
   justify-content:center;
-
   gap:8px;
-
-  margin-bottom:15px;
-
   flex-wrap:wrap;
-
+  margin-bottom:15px;
 }
-
 
 .tabs button{
-
-  padding:
-    8px
-    18px;
-
-  border:
-    2px solid var(--line);
-
-  border-radius:999px;
-
-  background:white;
-
-  color:var(--ink);
-
   cursor:pointer;
-
-  font-family:'Prompt';
-
+  padding:8px 18px;
+  border:2px solid var(--border);
+  border-radius:30px;
+  background:white;
+  color:var(--dark);
 }
-
 
 .tabs button.active{
-
   color:white;
-
-  border-color:transparent;
-
-  background:
-    linear-gradient(
-      #e8949e,
-      #c97d93
-    );
-
+  background:linear-gradient(135deg,#df8f9a,#bb6879);
 }
-
-
-/* =====================================================
-   TABLE
-===================================================== */
 
 .table-wrap{
-
   overflow-x:auto;
-
 }
-
 
 table{
-
   width:100%;
-
   border-collapse:collapse;
-
   font-size:14px;
-
 }
-
 
 th,
 td{
-
-  padding:
-    9px
-    10px;
-
-  border-bottom:
-    1px dashed var(--line);
-
+  padding:9px 10px;
+  border-bottom:1px dashed var(--border);
   white-space:nowrap;
-
-  text-align:right;
-
 }
-
-
-th:first-child,
-td:first-child{
-
-  text-align:left;
-
-}
-
 
 th{
-
-  font-family:'Mitr';
-
-  color:var(--mauve);
-
+  color:var(--muted);
+  font-family:"Mitr";
 }
-
 
 .dot{
-
   display:inline-block;
-
-  width:13px;
-
-  height:13px;
-
+  width:12px;
+  height:12px;
   border-radius:50%;
-
   margin-right:5px;
-
-  vertical-align:-2px;
-
 }
-
 
 .dot.ok{
-
-  background:var(--ok);
-
+  background:var(--green);
 }
-
 
 .dot.wait{
-
-  background:var(--wait);
-
+  background:var(--yellow);
 }
-
 
 .dot.bad{
-
-  background:var(--bad);
-
+  background:var(--red);
 }
-
-
-/* =====================================================
-   ROOM
-===================================================== */
 
 .room-title{
-
   text-align:center;
-
-  font-family:'Mitr';
-
-  font-size:
-    clamp(
-      58px,
-      15vw,
-      95px
-    );
-
-  margin:
-    20px
-    0
-    5px;
-
+  font-family:"Mitr";
+  font-size:clamp(60px,15vw,100px);
+  color:var(--pink2);
+  text-shadow:3px 3px #f4cdd1;
+  margin:25px 0 0;
 }
-
 
 .legend{
-
   display:flex;
-
   justify-content:center;
-
   gap:15px;
-
   flex-wrap:wrap;
-
   font-size:13px;
-
 }
-
 
 .rounds{
-
   display:grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      1fr
-    );
-
+  grid-template-columns:repeat(3,1fr);
   gap:35px 16px;
-
   margin-top:35px;
-
 }
-
 
 .rd .box{
-
-  min-height:135px;
-
-  padding-top:30px;
-
+  min-height:140px;
+  padding-top:32px;
 }
-
 
 .rd .box h2{
-
-  font-size:21px;
-
+  font-size:20px;
   top:-18px;
-
 }
-
 
 .amount{
-
   text-align:center;
-
-  font-family:'Mitr';
-
+  font-family:"Mitr";
   font-size:30px;
-
 }
-
 
 .status{
-
   text-align:center;
-
-  color:var(--mauve);
-
+  color:var(--muted);
   font-size:12px;
-
   margin-top:5px;
-
 }
-
 
 .center{
-
   text-align:center;
-
   margin-top:35px;
-
 }
-
-
-/* =====================================================
-   UPLOAD
-===================================================== */
 
 .upload-name{
-
   text-align:center;
-
   font-size:11px;
-
-  color:var(--mauve);
-
+  color:var(--muted);
+  margin-top:6px;
   word-break:break-all;
-
-  margin-top:7px;
-
 }
 
+.back-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
 
-/* =====================================================
-   MOBILE
-===================================================== */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translateX(-50%);
+  background:#57232b;
+  color:white;
+  padding:12px 22px;
+  border-radius:30px;
+  font-size:13px;
+  display:none;
+  z-index:1000;
+}
 
 @media(max-width:720px){
 
+  .topbar{
+    padding:14px;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  .user-area{
+    font-size:11px;
+  }
+
   .grid{
-
     grid-template-columns:1fr;
-
   }
 
   .box.wide{
-
     grid-column:auto;
-
   }
 
   .rounds{
-
     grid-template-columns:1fr;
-
   }
 
   .box h2{
-
-    font-size:25px;
-
-  }
-
-  .brand{
-
-    font-size:18px;
-
-  }
-
-  .brand small{
-
-    font-size:7px;
-
-  }
-
-  .who{
-
-    font-size:11px;
-
+    font-size:24px;
   }
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
+<header class="topbar">
 
-<!-- =====================================================
-     TOP
-===================================================== -->
-
-<div class="top">
-
-  <div class="brand">
-
+  <div class="logo">
     TUP 44 Farewell
-
     <small>
       TRIAMUDOMSAKKAPATANAKRAN SCHOOL
     </small>
-
   </div>
-
 
   <div
-    class="who"
-    id="who">
+    class="user-area"
+    id="userArea">
   </div>
 
-</div>
-
-
-<!-- =====================================================
-     APP
-===================================================== -->
+</header>
 
 <main id="app"></main>
 
+<div
+  class="toast"
+  id="toast">
+</div>
 
 <script>
 
-/* =====================================================
+/* =========================================================
+   DEMO ACCOUNT
+========================================================= */
+
+const DEFAULT_ACCOUNT = {
+  username:"วริศรา_6/9",
+  password:"123456",
+  room:9,
+  name:"วริศรา"
+};
+
+
+/* =========================================================
    DATA
-===================================================== */
+========================================================= */
 
 const PEOPLE = [
-
   28,25,26,39,38,
   27,34,33,36,36,
   35,36,36,36,40,
   28,31,38,37,33
-
 ];
 
-
 const RATE = [
-
   500,
   350,
   350
-
 ];
-
 
 const ROUNDS = [
 
   {
-
     date:"23/07/2569",
-
     time:"08:15",
-
     amount:PEOPLE.map(
-      p => p * RATE[0]
+      p => p * 500
     )
-
   },
 
   {
-
     date:"05/09/2569",
-
     time:"11:20",
-
     amount:PEOPLE.map(
-      p => p * RATE[1]
+      p => p * 350
     )
-
   },
 
   {
-
     date:"27/09/2569",
-
     time:"15:45",
-
     amount:[
-
       9800,
       8750,
       9100,
@@ -999,54 +552,38 @@ const ROUNDS = [
       13300,
       12950,
       null
-
     ]
-
   }
 
 ];
-
 
 const EXPENSES = [
 
   {
-
     date:"17/08/2569",
-
     name:"โฟโต้บูธ",
-
     unit:7500,
-
     qty:2,
-
     paid:5000
-
   },
 
   {
-
     date:"04-05/09/2569",
-
     name:"วงดนตรี (SCRUBB)",
-
     unit:120000,
-
     qty:1,
-
     paid:60000
-
   }
 
 ];
 
-
 const EXPENSE_NOTE =
-  "โอนค่าวงดนตรีงวดที่ 1 เป็น 2 รอบ รอบละ 30,000 บาท เพราะธนาคารจำกัดโอนไม่เกิน 50,000 บาท/วัน";
+"โอนค่าวงดนตรีงวดที่ 1 เป็น 2 รอบ รอบละ 30,000 บาท เพราะธนาคารจำกัดโอนไม่เกิน 50,000 บาท/วัน";
 
 
-/* =====================================================
-   VARIABLES
-===================================================== */
+/* =========================================================
+   STATE
+========================================================= */
 
 let currentUser = null;
 
@@ -1055,27 +592,77 @@ let currentRoom = 9;
 let selectedRound = 2;
 
 
-/* =====================================================
-   HELPERS
-===================================================== */
+/* =========================================================
+   STORAGE
+========================================================= */
 
-const app =
-  document.getElementById("app");
+function getAccounts(){
 
+  let accounts =
+    JSON.parse(
+      localStorage.getItem(
+        "tup44_accounts"
+      ) || "[]"
+    );
 
-function money(n){
+  /*
+    ใส่บัญชีหลักให้เสมอ
+  */
 
-  return Number(n || 0)
-    .toLocaleString("en-US");
+  const exists =
+    accounts.some(
+      a =>
+        a.username ===
+        DEFAULT_ACCOUNT.username
+    );
+
+  if(!exists){
+
+    accounts.push(
+      DEFAULT_ACCOUNT
+    );
+
+    localStorage.setItem(
+      "tup44_accounts",
+      JSON.stringify(accounts)
+    );
+
+  }
+
+  return accounts;
 
 }
 
 
-function total(arr){
+function saveAccounts(accounts){
 
-  return arr.reduce(
-    (a,b) =>
-      a + (Number(b) || 0),
+  localStorage.setItem(
+    "tup44_accounts",
+    JSON.stringify(accounts)
+  );
+
+}
+
+
+/* =========================================================
+   HELPERS
+========================================================= */
+
+function money(number){
+
+  return Number(
+    number || 0
+  ).toLocaleString("en-US");
+
+}
+
+
+function total(array){
+
+  return array.reduce(
+    (sum,value) =>
+      sum +
+      (Number(value) || 0),
     0
   );
 
@@ -1114,9 +701,33 @@ function balance(){
 }
 
 
-/* =====================================================
-   STATUS
-===================================================== */
+function toast(message){
+
+  const el =
+    document.getElementById(
+      "toast"
+    );
+
+  el.textContent =
+    message;
+
+  el.style.display =
+    "block";
+
+  setTimeout(
+    () => {
+      el.style.display =
+        "none";
+    },
+    2500
+  );
+
+}
+
+
+/* =========================================================
+   ROOM STATUS
+========================================================= */
 
 function getStatus(
   round,
@@ -1127,25 +738,26 @@ function getStatus(
     ROUNDS[round]
       .amount[room];
 
-
-  if(amount === null){
+  if(
+    amount === null ||
+    amount === undefined
+  ){
 
     return "wait";
 
   }
 
-
-  const need =
+  const required =
     PEOPLE[room] *
     RATE[round];
 
-
-  if(amount >= need){
+  if(
+    amount >= required
+  ){
 
     return "ok";
 
   }
-
 
   return "bad";
 
@@ -1157,67 +769,106 @@ function statusText(
   room
 ){
 
-  const s =
+  const status =
     getStatus(
       round,
       room
     );
 
-
-  if(s === "ok"){
+  if(status === "ok"){
 
     return "ตรวจสอบแล้ว (ครบถ้วน)";
 
   }
 
+  if(status === "bad"){
 
-  if(s === "bad"){
-
-    const need =
-      PEOPLE[room] *
-      RATE[round];
-
-    const amount =
-      ROUNDS[round]
-        .amount[room];
-
-    const missing =
-      Math.ceil(
-        (need - amount) /
-        RATE[round]
-      );
-
-    return "ตรวจสอบแล้ว (ขาด " +
-      missing +
-      " คน)";
+    return "ยอดไม่ครบ";
 
   }
-
 
   return "รอการตรวจสอบ";
 
 }
 
 
-/* =====================================================
+/* =========================================================
+   HEADER
+========================================================= */
+
+function updateHeader(){
+
+  const area =
+    document.getElementById(
+      "userArea"
+    );
+
+  if(!currentUser){
+
+    area.innerHTML =
+      "";
+
+    return;
+
+  }
+
+  area.innerHTML = `
+
+    ห้อง ม.6/${currentRoom}
+
+    <a
+      id="logout">
+      ออกจากระบบ
+    </a>
+
+  `;
+
+  document
+    .getElementById("logout")
+    .onclick =
+    logout;
+
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+function logout(){
+
+  currentUser =
+    null;
+
+  currentRoom =
+    9;
+
+  updateHeader();
+
+  showHome();
+
+}
+
+
+/* =========================================================
    HOME
-===================================================== */
+========================================================= */
 
 function showHome(){
 
-  document.getElementById("who")
-    .innerHTML = "";
-
+  updateHeader();
 
   app.innerHTML = `
 
     <section class="hero">
 
-      <div class="crest">
+      <div
+        style="
+          font-size:55px">
         🌸
       </div>
 
-      <h1 class="title">
+      <h1>
         TUP 44
       </h1>
 
@@ -1228,6 +879,8 @@ function showHome(){
       <p>
         TRIAMUDOMSAKKAPATANAKRAN SCHOOL
       </p>
+
+      <br>
 
       <button
         class="btn"
@@ -1241,60 +894,73 @@ function showHome(){
 
   `;
 
-
   document
-    .getElementById("loginButton")
+    .getElementById(
+      "loginButton"
+    )
     .onclick =
-      showLogin;
+    showLogin;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    LOGIN
-   ระบบทดลองแบบง่าย
-===================================================== */
+========================================================= */
 
 function showLogin(){
 
+  updateHeader();
+
   app.innerHTML = `
 
-    <div
-      class="hero"
-      style="padding-bottom:0">
+    <section class="hero">
 
-      <div
-        class="script"
-        style="
-          font-size:
-          clamp(
-            55px,
-            12vw,
-            90px
-          )">
-
-        Welcome back
-
+      <div class="script">
+        Welcome
       </div>
 
       <p>
         TUP 44 FAREWELL
       </p>
 
-    </div>
+    </section>
 
 
     <div class="panel">
 
+      <h2>
+        เข้าสู่ระบบ
+      </h2>
+
+
+      <div class="demo-account">
+
+        <b>
+          บัญชีสำหรับนำเสนอ
+        </b>
+
+        <br><br>
+
+        ชื่อผู้ใช้:
+        <b>วริศรา_6/9</b>
+
+        <br>
+
+        รหัสผ่าน:
+        <b>123456</b>
+
+      </div>
+
+
       <label>
-        ชื่อผู้ใช้งาน
+        ชื่อผู้ใช้
       </label>
 
       <input
-        type="text"
-        id="username"
+        id="loginUsername"
         value="วริศรา_6/9"
-        placeholder="เช่น วริศรา_6/9"
+        autocomplete="username"
       >
 
 
@@ -1303,33 +969,43 @@ function showLogin(){
       </label>
 
       <input
+        id="loginPassword"
         type="password"
-        id="password"
         value="123456"
-        placeholder="ใส่อะไรก็ได้"
+        autocomplete="current-password"
       >
 
 
-      <div class="login-note">
+      <div class="form-buttons">
 
-        ระบบทดลองสำหรับดูหน้าเว็บไซต์<br>
+        <button
+          class="btn"
+          id="loginSubmit">
 
-        ตอนนี้สามารถใช้ชื่ออะไรก็ได้<br>
+          เข้าสู่ระบบ
 
-        ระบบจะใช้เลขห้องจากชื่อ เช่น
-        <b>วริศรา_6/9</b>
+        </button>
+
+
+        <button
+          class="btn secondary"
+          id="registerButton">
+
+          ลงทะเบียนบัญชีใหม่
+
+        </button>
 
       </div>
 
 
-      <button
-        class="btn"
-        id="enter"
-        style="width:100%">
+      <div class="info">
 
-        เข้าสู่เว็บไซต์
+        สำหรับการนำเสนอเว็บไซต์
+        ระบบนี้ใช้ข้อมูลทดลอง
+        เพื่อให้สามารถสาธิต
+        การเข้าสู่ระบบและการลงทะเบียนได้
 
-      </button>
+      </div>
 
     </div>
 
@@ -1337,179 +1013,494 @@ function showLogin(){
 
 
   document
-    .getElementById("enter")
+    .getElementById(
+      "loginSubmit"
+    )
     .onclick =
-      enterDemo;
+    login;
+
+
+  document
+    .getElementById(
+      "registerButton"
+    )
+    .onclick =
+    showRegister;
 
 }
 
 
-/* =====================================================
-   ENTER DEMO
-===================================================== */
+/* =========================================================
+   LOGIN FUNCTION
+========================================================= */
 
-function enterDemo(){
+function login(){
 
-  const input =
+  const username =
     document
-      .getElementById("username")
+      .getElementById(
+        "loginUsername"
+      )
       .value
       .trim();
 
+  const password =
+    document
+      .getElementById(
+        "loginPassword"
+      )
+      .value;
 
-  /*
-    ถ้าพิมพ์ ..._6/9
-    จะอ่านเลขห้องออกมา
 
-    ถ้าอ่านไม่ได้
-    ใช้ห้อง 9 เป็นค่าเริ่มต้น
-  */
+  const accounts =
+    getAccounts();
 
-  const match =
-    input.match(
-      /6\s*\/\s*(\d{1,2})\s*$/
+
+  const account =
+    accounts.find(
+      a =>
+        a.username === username &&
+        a.password === password
     );
 
 
-  if(match){
+  if(!account){
 
-    const room =
-      Number(
-        match[1]
-      );
-
-
-    if(
-      room >= 1 &&
-      room <= 20
-    ){
-
-      currentRoom =
-        room;
-
-    }
-
-  }
-
-
-  currentUser =
-    input ||
-    "วริศรา_6/9";
-
-
-  showDashboard();
-
-}
-
-
-/* =====================================================
-   HEADER USER
-===================================================== */
-
-function updateHeader(){
-
-  const who =
-    document.getElementById("who");
-
-
-  if(!currentUser){
-
-    who.innerHTML = "";
+    alert(
+      "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง"
+    );
 
     return;
 
   }
 
 
-  who.innerHTML = `
+  currentUser =
+    account.username;
 
-    ห้อง ม.6/${currentRoom}
+  currentRoom =
+    Number(
+      account.room
+    ) || 9;
 
-    <a
-      id="logout">
 
-      ออกจากระบบ
+  toast(
+    "เข้าสู่ระบบสำเร็จ"
+  );
 
-    </a>
+
+  setTimeout(
+    () => {
+      showDashboard();
+    },
+    300
+  );
+
+}
+
+
+/* =========================================================
+   REGISTER
+========================================================= */
+
+function showRegister(){
+
+  updateHeader();
+
+  app.innerHTML = `
+
+    <section class="hero">
+
+      <div class="script">
+        Register
+      </div>
+
+      <p>
+        สร้างบัญชีสำหรับผู้ดูแลห้อง
+      </p>
+
+    </section>
+
+
+    <div class="panel">
+
+      <h2>
+        ลงทะเบียน
+      </h2>
+
+
+      <label>
+        ชื่อ - นามสกุล
+      </label>
+
+      <input
+        id="registerName"
+        placeholder="เช่น วริศรา โหลทอง"
+      >
+
+
+      <label>
+        ชื่อผู้ใช้
+      </label>
+
+      <input
+        id="registerUsername"
+        placeholder="เช่น วริศรา_6/9"
+      >
+
+
+      <label>
+        ห้อง
+      </label>
+
+      <select
+        id="registerRoom">
+
+        ${Array.from(
+          {length:20},
+          (_,i) => `
+
+            <option
+              value="${i+1}"
+              ${i+1 === 9 ? "selected" : ""}>
+
+              ม.6/${i+1}
+
+            </option>
+
+          `
+        ).join("")}
+
+      </select>
+
+
+      <label>
+        รหัสผ่าน
+      </label>
+
+      <input
+        id="registerPassword"
+        type="password"
+        placeholder="อย่างน้อย 6 ตัวอักษร"
+      >
+
+
+      <label>
+        ยืนยันรหัสผ่าน
+      </label>
+
+      <input
+        id="registerConfirm"
+        type="password"
+        placeholder="กรอกรหัสผ่านอีกครั้ง"
+      >
+
+
+      <div class="form-buttons">
+
+        <button
+          class="btn"
+          id="registerSubmit">
+
+          ลงทะเบียน
+
+        </button>
+
+
+        <button
+          class="btn secondary"
+          id="backLogin">
+
+          กลับไปหน้าเข้าสู่ระบบ
+
+        </button>
+
+      </div>
+
+
+      <div class="info">
+
+        ตัวอย่างบัญชีที่ตั้งไว้สำหรับการนำเสนอ:
+
+        <br>
+
+        <b>วริศรา_6/9</b>
+        /
+        <b>123456</b>
+
+      </div>
+
+    </div>
 
   `;
 
 
   document
-    .getElementById("logout")
+    .getElementById(
+      "registerSubmit"
+    )
     .onclick =
-      () => {
+    register;
 
-        currentUser =
-          null;
 
-        currentRoom =
-          9;
-
-        showHome();
-
-      };
+  document
+    .getElementById(
+      "backLogin"
+    )
+    .onclick =
+    showLogin;
 
 }
 
 
-/* =====================================================
+/* =========================================================
+   REGISTER FUNCTION
+========================================================= */
+
+function register(){
+
+  const name =
+    document
+      .getElementById(
+        "registerName"
+      )
+      .value
+      .trim();
+
+  const username =
+    document
+      .getElementById(
+        "registerUsername"
+      )
+      .value
+      .trim();
+
+  const room =
+    Number(
+      document
+        .getElementById(
+          "registerRoom"
+        )
+        .value
+    );
+
+  const password =
+    document
+      .getElementById(
+        "registerPassword"
+      )
+      .value;
+
+  const confirm =
+    document
+      .getElementById(
+        "registerConfirm"
+      )
+      .value;
+
+
+  if(!name){
+
+    alert(
+      "กรุณากรอกชื่อ - นามสกุล"
+    );
+
+    return;
+
+  }
+
+
+  if(!username){
+
+    alert(
+      "กรุณากรอกชื่อผู้ใช้"
+    );
+
+    return;
+
+  }
+
+
+  if(!password){
+
+    alert(
+      "กรุณากรอกรหัสผ่าน"
+    );
+
+    return;
+
+  }
+
+
+  if(password.length < 6){
+
+    alert(
+      "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
+    );
+
+    return;
+
+  }
+
+
+  if(password !== confirm){
+
+    alert(
+      "รหัสผ่านไม่ตรงกัน"
+    );
+
+    return;
+
+  }
+
+
+  const accounts =
+    getAccounts();
+
+
+  const exists =
+    accounts.some(
+      a =>
+        a.username
+          .toLowerCase() ===
+        username.toLowerCase()
+    );
+
+
+  if(exists){
+
+    alert(
+      "ชื่อผู้ใช้นี้มีอยู่แล้ว"
+    );
+
+    return;
+
+  }
+
+
+  accounts.push({
+
+    username:username,
+
+    password:password,
+
+    room:room,
+
+    name:name
+
+  });
+
+
+  saveAccounts(
+    accounts
+  );
+
+
+  alert(
+    "ลงทะเบียนสำเร็จ!"
+  );
+
+
+  document
+    .getElementById(
+      "loginUsername"
+    );
+
+  showLogin();
+
+
+  setTimeout(
+    () => {
+
+      const userInput =
+        document
+          .getElementById(
+            "loginUsername"
+          );
+
+      const passInput =
+        document
+          .getElementById(
+            "loginPassword"
+          );
+
+      if(userInput){
+
+        userInput.value =
+          username;
+
+      }
+
+      if(passInput){
+
+        passInput.value =
+          password;
+
+      }
+
+    },
+    50
+  );
+
+}
+
+
+/* =========================================================
    DASHBOARD
-===================================================== */
+========================================================= */
 
 function showDashboard(){
 
   updateHeader();
 
+  const income =
+    incomeTotal();
 
-  const incomes =
-    ROUNDS.map(
-      r =>
-        total(r.amount)
-    );
+  const expense =
+    expenseTotal();
+
+  const remain =
+    balance();
 
 
   app.innerHTML = `
 
-    <div
+    <section
       class="hero"
-      style="
-        padding:
-        20px
-        0
-        0">
+      style="padding:15px 0 0">
 
       <h1
-        class="title"
         style="
           font-size:
           clamp(
-            42px,
+            45px,
             9vw,
-            68px
-          );
-          margin:0">
+            75px
+          )">
 
         TUP 44
 
-        <span
-          class="script"
-          style="
-            font-size:1.25em">
-
-          Farewell
-
-        </span>
-
       </h1>
 
-    </div>
+      <div
+        class="script"
+        style="
+          font-size:
+          clamp(
+            65px,
+            12vw,
+            100px
+          )">
+
+        Farewell
+
+      </div>
+
+    </section>
 
 
     <div class="grid">
 
-
-      <!-- รายรับ -->
 
       <div class="box">
 
@@ -1519,69 +1510,46 @@ function showDashboard(){
 
 
         ${ROUNDS.map(
-
           (r,i) => `
 
             <div class="row">
 
               <span>
-
                 รอบที่ ${i+1}
-
                 <br>
-
                 <small>
                   ${r.date}
                 </small>
-
               </span>
 
               <b>
-
                 ${money(
-                  incomes[i]
+                  total(r.amount)
                 )}
                 บาท
-
               </b>
 
             </div>
 
           `
-
         ).join("")}
 
 
         <div class="row">
 
           <b>
-            รวม
+            รวมรายรับ
           </b>
 
           <b>
-
-            ${money(
-              incomeTotal()
-            )}
-
+            ${money(income)}
             บาท
-
           </b>
-
-        </div>
-
-
-        <div class="note">
-
-          * รอบที่ 3
-          ยังไม่ได้ตรวจสอบกับยอดธนาคาร
 
         </div>
 
       </div>
 
-
-      <!-- รายจ่าย -->
 
       <div class="box">
 
@@ -1591,7 +1559,6 @@ function showDashboard(){
 
 
         ${EXPENSES.map(
-
           e => `
 
             <div class="row">
@@ -1604,31 +1571,11 @@ function showDashboard(){
 
                 ${e.name}
 
-                <br>
-
-                <small>
-
-                  ${money(e.unit)}
-                  ×
-                  ${e.qty}
-
-                  =
-                  ${money(
-                    e.unit *
-                    e.qty
-                  )}
-
-                </small>
-
               </span>
-
 
               <b>
 
-                ${money(
-                  e.paid
-                )}
-
+                ${money(e.paid)}
                 บาท
 
               </b>
@@ -1636,39 +1583,29 @@ function showDashboard(){
             </div>
 
           `
-
         ).join("")}
 
 
         <div class="row">
 
           <b>
-            รวม
+            รวมรายจ่าย
           </b>
 
           <b>
-
-            ${money(
-              expenseTotal()
-            )}
-
+            ${money(expense)}
             บาท
-
           </b>
 
         </div>
 
 
         <div class="note">
-
           ${EXPENSE_NOTE}
-
         </div>
 
       </div>
 
-
-      <!-- BALANCE -->
 
       <div class="box wide">
 
@@ -1679,29 +1616,7 @@ function showDashboard(){
 
         <div class="big">
 
-          ${money(
-            balance()
-          )}
-
-          บาท
-
-        </div>
-
-
-        <div
-          class="note"
-          style="
-            text-align:center">
-
-          ยอดหลังรอบที่ 2
-          ที่ตรวจตรงกับธนาคารแล้ว:
-
-          ${money(
-            incomes[0] +
-            incomes[1] -
-            expenseTotal()
-          )}
-
+          ${money(remain)}
           บาท
 
         </div>
@@ -1711,13 +1626,10 @@ function showDashboard(){
     </div>
 
 
-    <!-- TABLE -->
-
     <div
       class="box wide"
       style="
-        margin-top:
-        38px">
+        margin-top:40px">
 
       <h2>
         ยอดเงินทุกห้อง
@@ -1727,12 +1639,8 @@ function showDashboard(){
       <div class="tabs">
 
         <button
-          data-round="0"
-          class="${
-            selectedRound === 0
-              ? "active"
-              : ""
-          }">
+          class="${selectedRound===0?"active":""}"
+          data-round="0">
 
           รอบที่ 1
 
@@ -1740,12 +1648,8 @@ function showDashboard(){
 
 
         <button
-          data-round="1"
-          class="${
-            selectedRound === 1
-              ? "active"
-              : ""
-          }">
+          class="${selectedRound===1?"active":""}"
+          data-round="1">
 
           รอบที่ 2
 
@@ -1753,12 +1657,8 @@ function showDashboard(){
 
 
         <button
-          data-round="2"
-          class="${
-            selectedRound === 2
-              ? "active"
-              : ""
-          }">
+          class="${selectedRound===2?"active":""}"
+          data-round="2">
 
           รอบที่ 3
 
@@ -1767,22 +1667,27 @@ function showDashboard(){
       </div>
 
 
-      <div class="table-wrap">
-
-        ${createTable()}
-
-      </div>
+      ${createTable()}
 
     </div>
 
 
-    <div class="center">
+    <div class="back-buttons">
 
       <button
         class="btn"
-        id="roomButton">
+        id="myRoom">
 
-        ยอดเงินของห้อง
+        ดูยอดห้องของฉัน
+
+      </button>
+
+
+      <button
+        class="btn secondary"
+        id="registerAgain">
+
+        หน้าลงทะเบียน
 
       </button>
 
@@ -1796,7 +1701,6 @@ function showDashboard(){
       "[data-round]"
     )
     .forEach(
-
       button => {
 
         button.onclick =
@@ -1814,23 +1718,30 @@ function showDashboard(){
           };
 
       }
-
     );
 
 
   document
     .getElementById(
-      "roomButton"
+      "myRoom"
     )
     .onclick =
-      showRoom;
+    showRoom;
+
+
+  document
+    .getElementById(
+      "registerAgain"
+    )
+    .onclick =
+    showRegister;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    TABLE
-===================================================== */
+========================================================= */
 
 function createTable(){
 
@@ -1844,66 +1755,53 @@ function createTable(){
 
     <p
       style="
-        text-align:center">
+        text-align:center;
+        color:var(--muted)">
 
-      ${
-        selectedRound === 0
-          ? "ปิดยอดครั้งที่ 1"
-          : selectedRound === 1
-            ? "ปิดยอดครั้งที่ 2"
-            : "อยู่ระหว่างเก็บยอดครั้งที่ 3"
-      }
-
-      <br>
-
-      วันที่
-      ${round.date}
-
-      เวลา
-      ${round.time}
-      น.
+      วันที่ ${round.date}
+      เวลา ${round.time} น.
 
     </p>
 
 
-    <table>
+    <div class="table-wrap">
 
-      <thead>
+      <table>
 
-        <tr>
+        <thead>
 
-          <th>
-            ห้อง
-          </th>
+          <tr>
 
-          <th>
-            จำนวน
-          </th>
+            <th>
+              ห้อง
+            </th>
 
-          <th>
-            ยอดเงิน
-          </th>
+            <th>
+              จำนวน
+            </th>
 
-          <th>
-            สถานะ
-          </th>
+            <th>
+              ยอดเงิน
+            </th>
 
-        </tr>
+            <th>
+              สถานะ
+            </th>
 
-      </thead>
+          </tr>
 
-      <tbody>
+        </thead>
+
+        <tbody>
 
   `;
 
 
   PEOPLE.forEach(
-
     (people,i) => {
 
       const amount =
         round.amount[i];
-
 
       const status =
         getStatus(
@@ -1925,13 +1823,11 @@ function createTable(){
           </td>
 
           <td>
-
             ${
               amount === null
                 ? "-"
                 : money(amount)
             }
-
           </td>
 
           <td>
@@ -1952,15 +1848,16 @@ function createTable(){
       `;
 
     }
-
   );
 
 
   html += `
 
-      </tbody>
+        </tbody>
 
-    </table>
+      </table>
+
+    </div>
 
   `;
 
@@ -1970,21 +1867,32 @@ function createTable(){
 }
 
 
-/* =====================================================
+/* =========================================================
    ROOM PAGE
-===================================================== */
+========================================================= */
 
 function showRoom(){
 
   updateHeader();
 
 
-  const index =
+  const roomIndex =
     currentRoom - 1;
 
 
-  const requiredTotal =
-    PEOPLE[index] *
+  const totalPaid =
+    total(
+      ROUNDS.map(
+        r =>
+          r.amount[
+            roomIndex
+          ]
+      )
+    );
+
+
+  const totalRequired =
+    PEOPLE[roomIndex] *
     (
       RATE[0] +
       RATE[1] +
@@ -1992,50 +1900,31 @@ function showRoom(){
     );
 
 
-  const paidTotal =
-    total(
-      ROUNDS.map(
-        r =>
-          r.amount[index]
-      )
-    );
-
-
   app.innerHTML = `
 
-    <h1 class="room-title">
+    <div
+      class="room-title">
 
       M.6/${currentRoom}
 
-    </h1>
+    </div>
 
 
     <div class="legend">
 
       <span>
-
         <i class="dot ok"></i>
-
         ครบถ้วน
-
       </span>
 
-
       <span>
-
         <i class="dot wait"></i>
-
-        รอการตรวจสอบ
-
+        รอตรวจสอบ
       </span>
 
-
       <span>
-
         <i class="dot bad"></i>
-
-        ไม่ครบถ้วน
-
+        ไม่ครบ
       </span>
 
     </div>
@@ -2045,17 +1934,17 @@ function showRoom(){
 
 
       ${ROUNDS.map(
-
         (round,k) => {
 
           const amount =
-            round.amount[index];
-
+            round.amount[
+              roomIndex
+            ];
 
           const status =
             getStatus(
               k,
-              index
+              roomIndex
             );
 
 
@@ -2066,10 +1955,7 @@ function showRoom(){
               <div class="box">
 
                 <h2>
-
-                  ยอดครั้งที่
-                  ${k+1}
-
+                  ยอดครั้งที่ ${k+1}
                 </h2>
 
 
@@ -2093,20 +1979,20 @@ function showRoom(){
                 <div class="status">
 
                   <span
-                    class="
-                      dot
-                      ${status}
-                    ">
+                    class="dot ${status}">
                   </span>
 
                   ${statusText(
                     k,
-                    index
+                    roomIndex
                   )}
 
                 </div>
 
               </div>
+
+
+              <br>
 
 
               <button
@@ -2119,21 +2005,16 @@ function showRoom(){
 
 
               <input
-                type="file"
                 hidden
-                accept="
-                  image/*,
-                  .pdf
-                "
+                type="file"
+                accept="image/*,.pdf"
                 data-file="${k}"
               >
 
 
               <div
                 class="upload-name"
-                id="
-                  uploadName${k}
-                ">
+                id="fileName${k}">
 
               </div>
 
@@ -2142,7 +2023,6 @@ function showRoom(){
           `;
 
         }
-
       ).join("")}
 
 
@@ -2150,66 +2030,57 @@ function showRoom(){
 
 
     <div
-      class="rd"
+      class="box"
       style="
-        margin-top:
-        35px">
+        margin-top:40px">
 
-      <div class="box">
-
-        <h2>
-          ยอดรวมทั้งหมด
-        </h2>
+      <h2>
+        สรุปห้อง
+      </h2>
 
 
-        <div class="amount"
+      <div class="big">
+
+        ${money(totalPaid)}
+
+        <span
           style="
-            font-size:
-            clamp(
-              40px,
-              10vw,
-              68px
-            )">
-
-          ${money(
-            paidTotal
-          )}
+            font-size:25px">
 
           บาท
 
-        </div>
+        </span>
+
+      </div>
 
 
-        <div class="status">
+      <div
+        style="
+          text-align:center;
+          color:var(--muted)">
 
-          ยอดที่ต้องชำระทั้งหมด
+        จากยอดที่ต้องชำระ
+        ${money(totalRequired)}
+        บาท
 
-          ${money(
-            requiredTotal
-          )}
+        <br>
 
-          บาท
-
-          <br>
-
-          จำนวน
-          ${PEOPLE[index]}
-          คน
-
-        </div>
+        จำนวน
+        ${PEOPLE[roomIndex]}
+        คน
 
       </div>
 
     </div>
 
 
-    <div class="center">
+    <div class="back-buttons">
 
       <button
         class="btn"
-        id="back">
+        id="dashboardButton">
 
-        กลับหน้าหลัก
+        กลับ Dashboard
 
       </button>
 
@@ -2219,9 +2090,11 @@ function showRoom(){
 
 
   document
-    .getElementById("back")
+    .getElementById(
+      "dashboardButton"
+    )
     .onclick =
-      showDashboard;
+    showDashboard;
 
 
   document
@@ -2229,36 +2102,23 @@ function showRoom(){
       "[data-upload]"
     )
     .forEach(
-
       button => {
 
         button.onclick =
           () => {
 
-            const k =
-              Number(
-                button
-                  .dataset
-                  .upload
-              );
+            const round =
+              button.dataset.upload;
 
-
-            const input =
-              document.querySelector(
-                `[data-file="${k}"]`
-              );
-
-
-            if(input){
-
-              input.click();
-
-            }
+            document
+              .querySelector(
+                `[data-file="${round}"]`
+              )
+              .click();
 
           };
 
       }
-
     );
 
 
@@ -2267,7 +2127,6 @@ function showRoom(){
       "[data-file]"
     )
     .forEach(
-
       input => {
 
         input.onchange =
@@ -2276,7 +2135,6 @@ function showRoom(){
             const file =
               input.files[0];
 
-
             if(!file){
 
               return;
@@ -2284,53 +2142,52 @@ function showRoom(){
             }
 
 
-            if(
-              file.size >
-              5 * 1024 * 1024
-            ){
-
-              alert(
-                "ไฟล์ต้องมีขนาดไม่เกิน 5 MB"
-              );
-
-              input.value =
-                "";
-
-              return;
-
-            }
+            const round =
+              input.dataset.file;
 
 
-            const k =
-              Number(
-                input
-                  .dataset
-                  .file
-              );
-
-
-            const output =
-              document.getElementById(
-                "uploadName" + k
-              );
-
-
-            output.textContent =
+            document
+              .getElementById(
+                "fileName" + round
+              )
+              .textContent =
               "เลือกไฟล์แล้ว: " +
               file.name;
+
+
+            /*
+              โหมด Demo:
+              จำชื่อไฟล์ไว้ในเครื่อง
+            */
+
+            localStorage.setItem(
+              "slip_room_" +
+              currentRoom +
+              "_" +
+              round,
+
+              file.name
+            );
+
+
+            toast(
+              "เลือกสลิปสำเร็จ"
+            );
 
           };
 
       }
-
     );
+
 
 }
 
 
-/* =====================================================
-   START
-===================================================== */
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+getAccounts();
 
 showHome();
 
