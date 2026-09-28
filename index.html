@@ -1,117 +1,114 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
 <title>TUP 44 Farewell</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Prompt:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Prompt:wght@400;500;600&family=Great+Vibes&display=swap"
+  rel="stylesheet"
+>
 
 <style>
 
+/* =====================================================
+   THEME
+===================================================== */
+
 :root{
+
   --bg:#fbeee8;
   --pink:#f4c8cb;
-  --card:#fff;
+  --card:#ffffff;
   --ink:#4a1010;
   --mauve:#8b6468;
   --rose:#b0525f;
   --line:#cf8a96;
-  --b1:#e8949e;
-  --b2:#c97d93;
   --ok:#3f9b3f;
   --wait:#e6a72c;
   --bad:#c62a2a;
   --wrap:#faeee9;
-}
-
-@media(prefers-color-scheme:dark){
-
-  :root:not([data-theme="light"]){
-
-    --bg:#2a1719;
-    --pink:#4a2a2f;
-    --card:#3a2226;
-    --ink:#f8e4e4;
-    --mauve:#d6b0b4;
-    --rose:#f0a0ae;
-    --line:#a86672;
-    --wrap:#33201f;
-
-  }
 
 }
 
-:root[data-theme="dark"]{
 
-  --bg:#2a1719;
-  --pink:#4a2a2f;
-  --card:#3a2226;
-  --ink:#f8e4e4;
-  --mauve:#d6b0b4;
-  --rose:#f0a0ae;
-  --line:#a86672;
-  --wrap:#33201f;
-
-}
-
-html{
-
-  scroll-padding-top:env(safe-area-inset-top,0px);
-  height:100%;
-
-}
+/* =====================================================
+   BASIC
+===================================================== */
 
 *{
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
 
   margin:0;
-  min-height:100%;
+
+  min-height:100vh;
 
   background:var(--bg);
+
   color:var(--ink);
 
-  font-family:'Prompt','Noto Sans Thai',sans-serif;
+  font-family:
+    'Prompt',
+    'Noto Sans Thai',
+    sans-serif;
 
   background-image:
+
     radial-gradient(
       circle at 8% 12%,
       #f7c9d0aa 0 60px,
       transparent 62px
     ),
+
     radial-gradient(
       circle at 92% 30%,
       #f7c9d088 0 90px,
       transparent 92px
     ),
+
     radial-gradient(
       circle at 20% 85%,
       #f7c9d077 0 70px,
       transparent 72px
     );
 
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-
 }
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
 
 .top{
 
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
 
-  padding:14px 20px;
+  padding:16px 22px;
 
 }
 
+
 .brand{
 
-  font-family:'Mitr',sans-serif;
+  font-family:'Mitr';
 
   font-size:22px;
 
@@ -122,21 +119,23 @@ body{
 
 }
 
+
 .brand small{
 
   display:block;
 
   font-family:'Prompt';
 
-  font-size:10px;
+  font-size:9px;
 
-  letter-spacing:.06em;
+  letter-spacing:.05em;
 
   color:var(--ink);
 
   text-shadow:none;
 
 }
+
 
 .who{
 
@@ -146,33 +145,59 @@ body{
 
 }
 
+
 .who a{
 
   color:var(--ink);
 
-  cursor:pointer;
-
   text-decoration:underline;
+
+  cursor:pointer;
 
   margin-left:8px;
 
 }
 
+
+/* =====================================================
+   MAIN
+===================================================== */
+
 main{
 
   max-width:1000px;
 
-  margin:0 auto;
+  margin:auto;
 
-  padding:8px 16px 40px;
+  padding:
+    10px
+    16px
+    60px;
 
 }
+
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+.title{
+
+  font-family:'Mitr';
+
+  color:var(--rose);
+
+  text-shadow:
+    3px 3px 0 var(--pink),
+    -1px -1px 0 var(--line);
+
+}
+
 
 .script{
 
   font-family:
     'Great Vibes',
-    'Brush Script MT',
     cursive;
 
   color:var(--rose);
@@ -181,77 +206,93 @@ main{
 
 }
 
-.title{
 
-  font-family:'Mitr',sans-serif;
-
-  color:var(--rose);
-
-  text-shadow:
-    3px 3px 0 var(--pink),
-    -1px -1px 0 var(--line);
-
-  font-weight:600;
-
-}
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
 
   text-align:center;
 
-  padding:40px 0 24px;
+  padding:
+    45px
+    0
+    30px;
 
 }
+
 
 .hero .title{
 
   font-size:
-    clamp(56px,14vw,120px);
+    clamp(
+      58px,
+      15vw,
+      120px
+    );
 
   margin:0;
 
 }
 
+
 .hero .script{
 
   font-size:
-    clamp(64px,17vw,150px);
+    clamp(
+      70px,
+      17vw,
+      150px
+    );
 
-  margin:-10px 0 0;
+  margin-top:-10px;
 
 }
+
 
 .hero p{
 
-  letter-spacing:.14em;
+  font-size:13px;
 
   font-weight:600;
 
-  font-size:13px;
+  letter-spacing:.12em;
 
-  margin:12px 0 28px;
+  margin:
+    12px
+    0
+    30px;
 
 }
+
 
 .crest{
 
-  font-size:52px;
+  font-size:55px;
 
 }
 
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
 .btn{
 
-  font-family:'Mitr',sans-serif;
+  font-family:'Mitr';
 
-  font-size:20px;
+  font-size:19px;
 
-  color:#fff;
+  color:white;
 
   border:0;
 
   cursor:pointer;
 
-  padding:14px 44px;
+  padding:
+    13px
+    38px;
 
   min-width:220px;
 
@@ -262,6 +303,7 @@ main{
     );
 
   clip-path:polygon(
+
     0 8px,
     8px 0,
     calc(100% - 8px) 0,
@@ -270,6 +312,7 @@ main{
     calc(100% - 8px) 100%,
     8px 100%,
     0 calc(100% - 8px)
+
   );
 
   box-shadow:
@@ -277,30 +320,42 @@ main{
 
 }
 
-.btn.sm{
 
-  font-size:15px;
+.btn:hover{
 
-  padding:9px 20px;
+  transform:translateY(-2px);
+
+}
+
+
+.btn.small{
 
   min-width:0;
 
   width:100%;
 
-}
+  font-size:15px;
 
-.btn:focus-visible,
-input:focus-visible,
-a:focus-visible{
-
-  outline:
-    3px solid var(--ink);
-
-  outline-offset:2px;
+  padding:
+    9px
+    16px;
 
 }
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
 
 .panel{
+
+  max-width:440px;
+
+  margin:
+    20px
+    auto;
+
+  padding:28px;
 
   background:var(--wrap);
 
@@ -309,81 +364,66 @@ a:focus-visible{
 
   border-radius:22px;
 
-  padding:28px;
-
-  max-width:440px;
-
-  margin:24px auto;
-
 }
+
 
 label{
 
   display:block;
 
+  margin:
+    14px
+    0
+    6px;
+
   font-family:'Mitr';
 
   color:var(--mauve);
 
-  margin:14px 0 6px;
-
 }
 
-input[type=text],
-input[type=password]{
+
+input{
 
   width:100%;
 
-  padding:13px 16px;
-
-  font:inherit;
-
-  font-size:16px;
+  padding:13px 15px;
 
   border:
     3px solid var(--line);
 
   border-radius:14px;
 
-  background:#fff;
+  font-family:'Prompt';
 
-  color:#4a1010;
-
-}
-
-.msg{
-
-  color:var(--bad);
-
-  min-height:22px;
-
-  font-size:14px;
-
-  margin:10px 0;
-
-}
-
-.alt{
-
-  font-size:14px;
-
-  color:var(--mauve);
-
-  margin:16px 0;
-
-}
-
-.alt a{
+  font-size:16px;
 
   color:var(--ink);
 
-  font-weight:600;
-
-  text-decoration:underline;
-
-  cursor:pointer;
+  background:white;
 
 }
+
+
+.login-note{
+
+  font-size:13px;
+
+  color:var(--mauve);
+
+  margin:
+    12px
+    0
+    18px;
+
+  text-align:center;
+
+}
+
+
+/* =====================================================
+   DASHBOARD GRID
+===================================================== */
 
 .grid{
 
@@ -394,9 +434,10 @@ input[type=password]{
 
   gap:38px 20px;
 
-  margin-top:34px;
+  margin-top:30px;
 
 }
+
 
 .box{
 
@@ -409,11 +450,22 @@ input[type=password]{
 
   border-radius:20px;
 
-  padding:34px 18px 16px;
+  padding:
+    34px
+    18px
+    18px;
 
 }
 
-.box>h2{
+
+.box.wide{
+
+  grid-column:1 / -1;
+
+}
+
+
+.box h2{
 
   position:absolute;
 
@@ -428,23 +480,17 @@ input[type=password]{
 
   white-space:nowrap;
 
-  font-size:32px;
-
   font-family:'Mitr';
+
+  font-size:30px;
 
   color:var(--rose);
 
   text-shadow:
-    2px 2px 0 var(--pink),
-    -1px -1px 0 var(--line);
+    2px 2px 0 var(--pink);
 
 }
 
-.box.wide{
-
-  grid-column:1/-1;
-
-}
 
 .row{
 
@@ -452,9 +498,11 @@ input[type=password]{
 
   justify-content:space-between;
 
-  gap:10px;
+  gap:15px;
 
-  padding:7px 0;
+  padding:
+    8px
+    0;
 
   border-bottom:
     1px dashed var(--line);
@@ -463,11 +511,13 @@ input[type=password]{
 
 }
 
+
 .row:last-child{
 
-  border:0;
+  border-bottom:0;
 
 }
+
 
 .row b{
 
@@ -475,227 +525,80 @@ input[type=password]{
 
 }
 
+
 .big{
+
+  text-align:center;
 
   font-family:'Mitr';
 
   font-size:
-    clamp(38px,10vw,64px);
-
-  text-align:center;
-
-  color:var(--ink);
+    clamp(
+      40px,
+      10vw,
+      70px
+    );
 
 }
 
+
 .note{
 
-  font-size:12px;
-
   color:var(--mauve);
+
+  font-size:12px;
 
   margin-top:8px;
 
 }
 
-.center{
 
-  text-align:center;
-
-  margin-top:34px;
-
-}
-
-.legend{
-
-  display:flex;
-
-  gap:16px;
-
-  flex-wrap:wrap;
-
-  justify-content:center;
-
-  font-size:13px;
-
-  margin:8px 0 0;
-
-}
-
-.dot{
-
-  display:inline-block;
-
-  width:14px;
-
-  height:14px;
-
-  border-radius:50%;
-
-  vertical-align:-2px;
-
-  margin-right:6px;
-
-}
-
-.ok{
-
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      #8be48b,
-      var(--ok)
-    );
-
-}
-
-.wait{
-
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      #ffd57a,
-      var(--wait)
-    );
-
-}
-
-.bad{
-
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      #ff7a7a,
-      var(--bad)
-    );
-
-}
-
-.room{
-
-  font-family:'Mitr';
-
-  font-size:
-    clamp(56px,14vw,96px);
-
-  text-align:center;
-
-  margin:0;
-
-  color:var(--ink);
-
-}
-
-.rounds{
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:34px 16px;
-
-  margin-top:34px;
-
-}
-
-.rd .box{
-
-  padding:30px 14px 14px;
-
-  min-height:130px;
-
-}
-
-.rd .box h2{
-
-  font-size:22px;
-
-  top:-18px;
-
-}
-
-.rd .amt{
-
-  font-family:'Mitr';
-
-  font-size:28px;
-
-  text-align:center;
-
-}
-
-.rd .st{
-
-  font-size:12px;
-
-  text-align:center;
-
-  color:var(--mauve);
-
-  margin-top:4px;
-
-}
-
-.rd .btn{
-
-  margin-top:14px;
-
-}
-
-.rd .fn{
-
-  font-size:11px;
-
-  color:var(--mauve);
-
-  text-align:center;
-
-  margin-top:6px;
-
-  word-break:break-all;
-
-}
-
-.total .amt{
-
-  font-size:
-    clamp(40px,10vw,68px);
-
-}
+/* =====================================================
+   TABS
+===================================================== */
 
 .tabs{
 
   display:flex;
 
-  gap:8px;
-
   justify-content:center;
 
-  margin:0 0 14px;
+  gap:8px;
+
+  margin-bottom:15px;
+
+  flex-wrap:wrap;
 
 }
 
+
 .tabs button{
 
-  font:inherit;
-
-  padding:8px 18px;
+  padding:
+    8px
+    18px;
 
   border:
     2px solid var(--line);
 
   border-radius:999px;
 
-  background:var(--card);
+  background:white;
 
   color:var(--ink);
 
   cursor:pointer;
 
+  font-family:'Prompt';
+
 }
 
-.tabs button.on{
+
+.tabs button.active{
+
+  color:white;
+
+  border-color:transparent;
 
   background:
     linear-gradient(
@@ -703,19 +606,19 @@ input[type=password]{
       #c97d93
     );
 
-  color:#fff;
-
-  border-color:transparent;
-
 }
 
-.tw{
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-wrap{
 
   overflow-x:auto;
 
-  margin-top:10px;
-
 }
+
 
 table{
 
@@ -727,136 +630,267 @@ table{
 
 }
 
+
 th,
 td{
 
-  padding:8px 10px;
+  padding:
+    9px
+    10px;
 
   border-bottom:
     1px dashed var(--line);
 
-  text-align:right;
-
   white-space:nowrap;
+
+  text-align:right;
 
 }
 
+
 th:first-child,
-td:first-child,
-th:last-child,
-td:last-child{
+td:first-child{
 
   text-align:left;
 
 }
 
+
 th{
 
   font-family:'Mitr';
 
-  font-weight:500;
-
   color:var(--mauve);
 
 }
 
-tfoot td{
 
-  font-weight:600;
+.dot{
 
-  white-space:normal;
+  display:inline-block;
 
-  border:0;
+  width:13px;
 
-  padding-top:14px;
+  height:13px;
 
-}
+  border-radius:50%;
 
-.error-box{
+  margin-right:5px;
 
-  background:#fff0f0;
-
-  border:2px solid #d77;
-
-  color:#8b2020;
-
-  padding:14px;
-
-  border-radius:14px;
-
-  margin:20px 0;
-
-  font-size:14px;
+  vertical-align:-2px;
 
 }
 
-.success-box{
 
-  background:#effbef;
+.dot.ok{
 
-  border:2px solid #76b976;
-
-  color:#276627;
-
-  padding:14px;
-
-  border-radius:14px;
-
-  margin:20px 0;
-
-  font-size:14px;
+  background:var(--ok);
 
 }
 
-.loading{
+
+.dot.wait{
+
+  background:var(--wait);
+
+}
+
+
+.dot.bad{
+
+  background:var(--bad);
+
+}
+
+
+/* =====================================================
+   ROOM
+===================================================== */
+
+.room-title{
 
   text-align:center;
 
-  padding:30px;
+  font-family:'Mitr';
 
-  color:var(--mauve);
+  font-size:
+    clamp(
+      58px,
+      15vw,
+      95px
+    );
+
+  margin:
+    20px
+    0
+    5px;
 
 }
 
+
+.legend{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:15px;
+
+  flex-wrap:wrap;
+
+  font-size:13px;
+
+}
+
+
+.rounds{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  gap:35px 16px;
+
+  margin-top:35px;
+
+}
+
+
+.rd .box{
+
+  min-height:135px;
+
+  padding-top:30px;
+
+}
+
+
+.rd .box h2{
+
+  font-size:21px;
+
+  top:-18px;
+
+}
+
+
+.amount{
+
+  text-align:center;
+
+  font-family:'Mitr';
+
+  font-size:30px;
+
+}
+
+
+.status{
+
+  text-align:center;
+
+  color:var(--mauve);
+
+  font-size:12px;
+
+  margin-top:5px;
+
+}
+
+
+.center{
+
+  text-align:center;
+
+  margin-top:35px;
+
+}
+
+
+/* =====================================================
+   UPLOAD
+===================================================== */
+
+.upload-name{
+
+  text-align:center;
+
+  font-size:11px;
+
+  color:var(--mauve);
+
+  word-break:break-all;
+
+  margin-top:7px;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media(max-width:720px){
 
-  .grid,
+  .grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .box.wide{
+
+    grid-column:auto;
+
+  }
+
   .rounds{
 
     grid-template-columns:1fr;
 
   }
 
-  .box>h2{
+  .box h2{
 
-    font-size:26px;
-
-  }
-
-}
-
-@media(prefers-reduced-motion:no-preference){
-
-  .btn{
-
-    transition:
-      transform .15s;
+    font-size:25px;
 
   }
 
-  .btn:hover{
+  .brand{
 
-    transform:
-      translateY(-2px);
+    font-size:18px;
+
+  }
+
+  .brand small{
+
+    font-size:7px;
+
+  }
+
+  .who{
+
+    font-size:11px;
 
   }
 
 }
 
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     TOP
+===================================================== -->
 
 <div class="top">
 
@@ -870,6 +904,7 @@ tfoot td{
 
   </div>
 
+
   <div
     class="who"
     id="who">
@@ -878,36 +913,20 @@ tfoot td{
 </div>
 
 
-<main id="app">
+<!-- =====================================================
+     APP
+===================================================== -->
 
-  <div class="loading">
-    กำลังโหลดเว็บไซต์...
-  </div>
-
-</main>
-
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
-
-<script>
-
-window.supabase || document.write(
-  '<script src="https://unpkg.com/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"><\/script>'
-);
-
-</script>
-
-
-<script src="config.js"></script>
+<main id="app"></main>
 
 
 <script>
 
-/* =========================================================
-   ข้อมูลสำรอง
-========================================================= */
+/* =====================================================
+   DATA
+===================================================== */
 
-let P = [
+const PEOPLE = [
 
   28,25,26,39,38,
   27,34,33,36,36,
@@ -917,14 +936,16 @@ let P = [
 ];
 
 
-let RATE = [
+const RATE = [
+
   500,
   350,
   350
+
 ];
 
 
-let ROUNDS = [
+const ROUNDS = [
 
   {
 
@@ -932,10 +953,9 @@ let ROUNDS = [
 
     time:"08:15",
 
-    amt:
-      P.map(
-        p => p * 500
-      )
+    amount:PEOPLE.map(
+      p => p * RATE[0]
+    )
 
   },
 
@@ -945,10 +965,9 @@ let ROUNDS = [
 
     time:"11:20",
 
-    amt:
-      P.map(
-        p => p * 350
-      )
+    amount:PEOPLE.map(
+      p => p * RATE[1]
+    )
 
   },
 
@@ -958,7 +977,7 @@ let ROUNDS = [
 
     time:"15:45",
 
-    amt:[
+    amount:[
 
       9800,
       8750,
@@ -988,42 +1007,13 @@ let ROUNDS = [
 ];
 
 
-let BANK_VERIFIED = [
-  true,
-  true,
-  false
-];
-
-
-const BANK = [
-
-  "ตรวจสอบแล้ว (ยอดตรงกับธนาคาร)",
-
-  "ตรวจสอบแล้ว (ยอดตรงกับธนาคาร)",
-
-  "ยังไม่ได้ตรวจสอบกับยอดธนาคาร"
-
-];
-
-
-const CLOSED = [
-
-  "ปิดยอดครั้งที่ 1",
-
-  "ปิดยอดครั้งที่ 2",
-
-  "อยู่ระหว่างเก็บยอดครั้งที่ 3"
-
-];
-
-
-let EXPENSES = [
+const EXPENSES = [
 
   {
 
-    d:"17/08/2569",
+    date:"17/08/2569",
 
-    n:"โฟโต้บูธ",
+    name:"โฟโต้บูธ",
 
     unit:7500,
 
@@ -1035,9 +1025,9 @@ let EXPENSES = [
 
   {
 
-    d:"04-05/09/2569",
+    date:"04-05/09/2569",
 
-    n:"วงดนตรี (SCRUBB)",
+    name:"วงดนตรี (SCRUBB)",
 
     unit:120000,
 
@@ -1050,1149 +1040,174 @@ let EXPENSES = [
 ];
 
 
-const EXP_NOTE =
+const EXPENSE_NOTE =
   "โอนค่าวงดนตรีงวดที่ 1 เป็น 2 รอบ รอบละ 30,000 บาท เพราะธนาคารจำกัดโอนไม่เกิน 50,000 บาท/วัน";
 
 
-/* =========================================================
-   ตัวช่วย
-========================================================= */
+/* =====================================================
+   VARIABLES
+===================================================== */
 
-const $ =
-  s => document.querySelector(s);
+let currentUser = null;
 
+let currentRoom = 9;
+
+let selectedRound = 2;
+
+
+/* =====================================================
+   HELPERS
+===================================================== */
 
 const app =
   document.getElementById("app");
 
 
-const fmt =
-  n =>
-    Number(n || 0)
-      .toLocaleString("en-US");
+function money(n){
 
-
-const sum =
-  a =>
-    a.reduce(
-      (x,y) =>
-        x + (Number(y) || 0),
-      0
-    );
-
-
-const MAP = {
-
-  "ครบถ้วน":"ok",
-
-  "รอการตรวจสอบ":"wait",
-
-  "ไม่ครบถ้วน":"bad"
-
-};
-
-
-const LBL = {
-
-  ok:"ครบถ้วน",
-
-  wait:"รอการตรวจสอบ",
-
-  bad:"ไม่ครบถ้วน"
-
-};
-
-
-/* =========================================================
-   คำนวณสถานะ
-========================================================= */
-
-function status(r,i){
-
-  const R =
-    ROUNDS[r];
-
-  const a =
-    R.amt[i];
-
-  const need =
-    P[i] * RATE[r];
-
-
-  let c =
-    MAP[
-      R.st &&
-      R.st[i]
-    ] ||
-
-    (
-      a == null
-
-        ? "wait"
-
-        : a < need
-
-          ? "bad"
-
-          : "ok"
-    );
-
-
-  return {
-
-    c,
-
-    t:
-
-      LBL[c] +
-
-      (
-
-        c === "bad" &&
-        a != null &&
-        a < need
-
-          ? " (ขาด " +
-
-            Math.round(
-              (need-a) /
-              RATE[r]
-            ) +
-
-            " คน)"
-
-          : ""
-
-      )
-
-  };
+  return Number(n || 0)
+    .toLocaleString("en-US");
 
 }
 
 
-/* =========================================================
-   คำนวณยอดรวม
-========================================================= */
-
-let income = [];
-
-let totalIn = 0;
-
-let totalOut = 0;
-
-let balance = 0;
-
-
-function recalc(){
-
-  income =
-    ROUNDS.map(
-      r => sum(r.amt)
-    );
-
-
-  totalIn =
-    sum(income);
-
-
-  totalOut =
-    sum(
-      EXPENSES.map(
-        e => e.paid
-      )
-    );
-
-
-  balance =
-    totalIn -
-    totalOut;
-
-}
-
-
-/* =========================================================
-   Local Storage
-========================================================= */
-
-const store = {
-
-  get(k){
-
-    try{
-
-      return JSON.parse(
-        localStorage.getItem(k)
-      );
-
-    }catch(e){
-
-      return null;
-
-    }
-
-  },
-
-
-  set(k,v){
-
-    try{
-
-      localStorage.setItem(
-        k,
-        JSON.stringify(v)
-      );
-
-    }catch(e){}
-
-  },
-
-
-  del(k){
-
-    try{
-
-      localStorage.removeItem(k);
-
-    }catch(e){}
-
-  }
-
-};
-
-
-/* =========================================================
-   SHA-256
-========================================================= */
-
-async function hash(s){
-
-  const b =
-    await crypto.subtle.digest(
-
-      "SHA-256",
-
-      new TextEncoder()
-        .encode(s)
-
-    );
-
-
-  return [
-
-    ...new Uint8Array(b)
-
-  ]
-
-    .map(
-
-      x =>
-        x
-          .toString(16)
-          .padStart(2,"0")
-
-    )
-
-    .join("");
-
-}
-
-
-/* =========================================================
-   ตรวจเลขห้อง
-   เวอร์ชันใหม่
-========================================================= */
-
-function roomOf(u){
-
-  if(!u){
-
-    return null;
-
-  }
-
-
-  /*
-    ลบช่องว่างที่อาจติดมาจากการ copy
-  */
-
-  u =
-    String(u)
-      .trim()
-      .replace(/\u200B/g,"")
-      .replace(/\u200C/g,"")
-      .replace(/\u200D/g,"")
-      .replace(/\uFEFF/g,"");
-
-
-  /*
-    รองรับ
-
-    วริศรา_6/9
-    วริศรา_6 / 9
-    วริศรา_6/09
-    วริศรา_6 /09
-  */
-
-  const match =
-    u.match(
-      /6\s*\/\s*(\d{1,2})\s*$/
-    );
-
-
-  if(!match){
-
-    return null;
-
-  }
-
-
-  const room =
-    Number(match[1]);
-
-
-  if(
-    room < 1 ||
-    room > 20
-  ){
-
-    return null;
-
-  }
-
-
-  return room;
-
-}
-
-
-/* =========================================================
-   Session
-========================================================= */
-
-let session = null;
-
-let slips = {};
-
-
-/* =========================================================
-   แสดงผู้ใช้
-========================================================= */
-
-function who(){
-
-  const el =
-    $("#who");
-
-
-  if(!el){
-
-    return;
-
-  }
-
-
-  el.innerHTML =
-
-    session
-
-      ? `
-
-        ห้อง ม.6/${session.room}
-
-        <a
-          role="button"
-          tabindex="0"
-          id="out">
-
-          ออกจากระบบ
-
-        </a>
-
-      `
-
-      : "";
-
-
-  if(session){
-
-    const out =
-      $("#out");
-
-
-    if(out){
-
-      out.onclick =
-        async () => {
-
-          if(sb){
-
-            await sb.auth.signOut();
-
-          }
-
-
-          session =
-            null;
-
-
-          go("home");
-
-        };
-
-    }
-
-  }
-
-}
-
-
-/* =========================================================
-   เปลี่ยนหน้า
-========================================================= */
-
-function go(v){
-
-  who();
-
-
-  if(
-
-    !session &&
-
-    (
-      v === "dash" ||
-      v === "room"
-    )
-
-  ){
-
-    login();
-
-    return;
-
-  }
-
-
-  const pages = {
-
-    home,
-
-    login,
-
-    register,
-
-    dash,
-
-    room
-
-  };
-
-
-  if(pages[v]){
-
-    pages[v]();
-
-  }
-
-
-  window.scrollTo(
-    0,
+function total(arr){
+
+  return arr.reduce(
+    (a,b) =>
+      a + (Number(b) || 0),
     0
   );
 
 }
 
 
-/* =========================================================
-   Google Sheets
-========================================================= */
-
-const SHEETS =
-
-  (
-    typeof CONFIG !== "undefined" &&
-    CONFIG.sheets
-  )
-
-    ? CONFIG.sheets
-
-    : {};
-
-
-/* =========================================================
-   แปลง Google Sheets URL เป็น CSV
-========================================================= */
-
-function toCSVUrl(url){
-
-  if(!url){
-
-    return "";
-
-  }
-
-
-  url =
-    String(url)
-      .trim();
-
-
-  /*
-    ถ้าเป็น URL pubhtml
-    ให้เปลี่ยนเป็น pub + output=csv
-  */
-
-  if(
-    url.includes("/pubhtml")
-  ){
-
-    url =
-      url.replace(
-        "/pubhtml",
-        "/pub"
-      );
-
-
-    if(
-      !url.includes("output=csv")
-    ){
-
-      url +=
-        (
-          url.includes("?")
-            ? "&"
-            : "?"
-        ) +
-        "output=csv";
-
-    }
-
-  }
-
-
-  /*
-    ถ้ามี gid และเป็น published sheet
-    แต่ยังไม่มี output=csv
-  */
-
-  if(
-    url.includes("/pub?") &&
-    !url.includes("output=csv")
-  ){
-
-    url +=
-      "&output=csv";
-
-  }
-
-
-  return url;
-
-}
-
-
-/* =========================================================
-   CSV Parser
-========================================================= */
-
-function csv(t){
-
-  const rows = [];
-
-  let r = [];
-
-  let c = "";
-
-  let q = false;
-
-
-  for(
-    let i = 0;
-    i < t.length;
-    i++
-  ){
-
-    const ch =
-      t[i];
-
-
-    if(q){
-
-      if(
-
-        ch === '"' &&
-        t[i+1] === '"'
-
-      ){
-
-        c += '"';
-
-        i++;
-
-      }
-
-      else if(
-        ch === '"'
-      ){
-
-        q = false;
-
-      }
-
-      else{
-
-        c += ch;
-
-      }
-
-    }
-
-
-    else if(
-      ch === '"'
-    ){
-
-      q = true;
-
-    }
-
-
-    else if(
-      ch === ','
-    ){
-
-      r.push(c);
-
-      c = "";
-
-    }
-
-
-    else if(
-
-      ch === '\n' ||
-      ch === '\r'
-
-    ){
-
-      if(
-
-        ch === '\r' &&
-        t[i+1] === '\n'
-
-      ){
-
-        i++;
-
-      }
-
-
-      r.push(c);
-
-      c = "";
-
-      rows.push(r);
-
-      r = [];
-
-    }
-
-
-    else{
-
-      c += ch;
-
-    }
-
-  }
-
-
-  if(
-    c ||
-    r.length
-  ){
-
-    r.push(c);
-
-    rows.push(r);
-
-  }
-
-
-  if(!rows.length){
-
-    return [];
-
-  }
-
-
-  const h =
-    rows
-      .shift()
-      .map(
-
-        x =>
-          x
-            .trim()
-            .replace(
-              /^\uFEFF/,
-              ""
-            )
-
-      );
-
-
-  return rows
-
-    .filter(
-
-      r =>
-        r.some(
-          x =>
-            x.trim()
-        )
-
+function incomeTotal(){
+
+  return total(
+    ROUNDS.map(
+      r => total(r.amount)
     )
-
-    .map(
-
-      r =>
-        Object.fromEntries(
-
-          h.map(
-
-            (k,i) => [
-
-              k,
-
-              (
-                r[i] ||
-                ""
-              ).trim()
-
-            ]
-
-          )
-
-        )
-
-    );
+  );
 
 }
 
 
-/* =========================================================
-   แปลงตัวเลข
-========================================================= */
-
-const num =
-  v => {
-
-    v =
-      String(v || "")
-        .replace(/,/g,"")
-        .trim();
-
-
-    return
-
-      v === "" ||
-      isNaN(v)
-
-        ? null
-
-        : +v;
-
-  };
-
-
-/* =========================================================
-   โหลด Google Sheets
-========================================================= */
-
-async function loadData(){
-
-  if(!SHEETS.rooms){
-
-    console.warn(
-      "ไม่ได้ตั้งค่า Google Sheets"
-    );
-
-    return;
-
-  }
-
-
-  try{
-
-    const g =
-      async u => {
-
-        const url =
-          toCSVUrl(u);
-
-
-        console.log(
-          "กำลังโหลด:",
-          url
-        );
-
-
-        const response =
-          await fetch(
-            url
-          );
-
-
-        if(!response.ok){
-
-          throw new Error(
-            `HTTP ${response.status}`
-          );
-
-        }
-
-
-        const text =
-          await response.text();
-
-
-        if(
-
-          text
-            .toLowerCase()
-            .includes("<html") ||
-
-          text
-            .toLowerCase()
-            .includes("<!doctype")
-
-        ){
-
-          throw new Error(
-            "Google Sheets ไม่ได้ส่งข้อมูล CSV กรุณาตรวจสอบการ Publish เป็น CSV"
-          );
-
-        }
-
-
-        return csv(text);
-
-      };
-
-
-    const [
-
-      rm,
-
-      rd,
-
-      ex
-
-    ] = await Promise.all([
-
-      g(SHEETS.rooms),
-
-      SHEETS.rounds
-        ? g(SHEETS.rounds)
-        : Promise.resolve([]),
-
-      SHEETS.expenses
-        ? g(SHEETS.expenses)
-        : Promise.resolve([])
-
-    ]);
-
-
-    if(!rm.length){
-
-      throw new Error(
-        "ไม่พบข้อมูลห้องใน Google Sheets"
-      );
-
-    }
-
-
-    rm.sort(
-
-      (a,b) =>
-        Number(a.room) -
-        Number(b.room)
-
-    );
-
-
-    const info =
-      k =>
-        rd.find(
-          x =>
-            +x.round === k
-        ) || {};
-
-
-    P =
-      rm.map(
-        x =>
-          +x.people || 0
-      );
-
-
-    RATE =
-      [1,2,3].map(
-
-        k =>
-          +info(k).rate ||
-          RATE[k-1]
-
-      );
-
-
-    BANK_VERIFIED =
-      [1,2,3].map(
-
-        k =>
-          [
-
-            "yes",
-            "ใช่",
-            "y",
-            "true",
-            "1"
-
-          ].includes(
-
-            String(
-              info(k).bank_verified || ""
-            )
-              .toLowerCase()
-
-          )
-
-      );
-
-
-    ROUNDS =
-      [1,2,3].map(
-
-        k => ({
-
-          date:
-            info(k).date || "-",
-
-          time:
-            info(k).time || "-",
-
-          amt:
-            rm.map(
-
-              x =>
-                num(
-                  x[`r${k}_amount`]
-                )
-
-            ),
-
-          st:
-            rm.map(
-
-              x =>
-                x[`r${k}_status`]
-
-            )
-
-        })
-
-      );
-
-
-    if(ex.length){
-
-      EXPENSES =
-        ex.map(
-
-          x => ({
-
-            d:
-              x.date || "-",
-
-            n:
-              x.name || "-",
-
-            unit:
-              num(x.unit) || 0,
-
-            qty:
-              num(x.qty) || 0,
-
-            paid:
-              num(x.paid) || 0
-
-          })
-
-        );
-
-    }
-
-
-    recalc();
-
-
-    console.log(
-      "โหลด Google Sheets สำเร็จ"
-    );
-
-
-    console.log(
-      "Rooms:",
-      rm
-    );
-
-
-    console.log(
-      "Rounds:",
-      rd
-    );
-
-
-    console.log(
-      "Expenses:",
-      ex
-    );
-
-
-  }
-
-
-  catch(e){
-
-    console.error(
-      "โหลด Google Sheets ไม่สำเร็จ:",
-      e
-    );
-
-
-    console.warn(
-      "ระบบจะใช้ข้อมูลสำรองในเว็บไซต์"
-    );
-
-  }
+function expenseTotal(){
+
+  return total(
+    EXPENSES.map(
+      e => e.paid
+    )
+  );
 
 }
 
 
-/* =========================================================
-   Supabase
-========================================================= */
+function balance(){
 
-const noSb =
-  () =>
+  return (
+    incomeTotal() -
+    expenseTotal()
+  );
 
-    typeof CONFIG === "undefined"
-
-      ? "ไม่พบไฟล์ config.js"
-
-      : !CONFIG.supabaseUrl
-
-        ? "config.js ยังไม่มี Supabase URL"
-
-        : !CONFIG.supabaseKey
-
-          ? "config.js ยังไม่มี Supabase Key"
-
-          : "โหลด Supabase ไม่สำเร็จ";
+}
 
 
-const sb =
+/* =====================================================
+   STATUS
+===================================================== */
 
-  (
+function getStatus(
+  round,
+  room
+){
 
-    typeof CONFIG !== "undefined" &&
-
-    CONFIG.supabaseUrl &&
-
-    CONFIG.supabaseKey &&
-
-    window.supabase
-
-  )
-
-    ? window.supabase.createClient(
-
-        CONFIG.supabaseUrl,
-
-        CONFIG.supabaseKey
-
-      )
-
-    : null;
+  const amount =
+    ROUNDS[round]
+      .amount[room];
 
 
-/* =========================================================
-   สร้าง Email จาก username
-========================================================= */
+  if(amount === null){
 
-const email =
-  async u =>
+    return "wait";
 
-    "h" +
-
-    (
-      await hash(
-        u
-      )
-    ).slice(
-      0,
-      32
-    ) +
-
-    "@tup44.app";
+  }
 
 
-/* =========================================================
-   Session จาก Supabase
-========================================================= */
-
-const setSession =
-  u => {
-
-    if(!u){
-
-      return;
-
-    }
+  const need =
+    PEOPLE[room] *
+    RATE[round];
 
 
-    session = {
+  if(amount >= need){
 
-      user:
+    return "ok";
 
-        u.user_metadata &&
-        u.user_metadata.username
-
-          ? u.user_metadata.username
-
-          : u.email,
+  }
 
 
-      room:
+  return "bad";
 
-        Number(
-
-          u.user_metadata &&
-          u.user_metadata.room
-
-        ) || null
-
-    };
-
-  };
+}
 
 
-/* =========================================================
-   หน้า Home
-========================================================= */
+function statusText(
+  round,
+  room
+){
 
-function home(){
+  const s =
+    getStatus(
+      round,
+      room
+    );
+
+
+  if(s === "ok"){
+
+    return "ตรวจสอบแล้ว (ครบถ้วน)";
+
+  }
+
+
+  if(s === "bad"){
+
+    const need =
+      PEOPLE[room] *
+      RATE[round];
+
+    const amount =
+      ROUNDS[round]
+        .amount[room];
+
+    const missing =
+      Math.ceil(
+        (need - amount) /
+        RATE[round]
+      );
+
+    return "ตรวจสอบแล้ว (ขาด " +
+      missing +
+      " คน)";
+
+  }
+
+
+  return "รอการตรวจสอบ";
+
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+function showHome(){
+
+  document.getElementById("who")
+    .innerHTML = "";
+
 
   app.innerHTML = `
 
@@ -2216,7 +1231,7 @@ function home(){
 
       <button
         class="btn"
-        id="go">
+        id="loginButton">
 
         เข้าสู่ระบบ
 
@@ -2227,23 +1242,20 @@ function home(){
   `;
 
 
-  $("#go").onclick =
-
-    () =>
-      go(
-        session
-          ? "dash"
-          : "login"
-      );
+  document
+    .getElementById("loginButton")
+    .onclick =
+      showLogin;
 
 }
 
 
-/* =========================================================
-   Login
-========================================================= */
+/* =====================================================
+   LOGIN
+   ระบบทดลองแบบง่าย
+===================================================== */
 
-function login(){
+function showLogin(){
 
   app.innerHTML = `
 
@@ -2253,7 +1265,13 @@ function login(){
 
       <div
         class="script"
-        style="font-size:clamp(52px,12vw,90px)">
+        style="
+          font-size:
+          clamp(
+            55px,
+            12vw,
+            90px
+          )">
 
         Welcome back
 
@@ -2268,55 +1286,48 @@ function login(){
 
     <div class="panel">
 
-      <label for="u">
+      <label>
         ชื่อผู้ใช้งาน
       </label>
 
       <input
         type="text"
-        id="u"
-        autocomplete="username">
+        id="username"
+        value="วริศรา_6/9"
+        placeholder="เช่น วริศรา_6/9"
+      >
 
 
-      <label for="p">
+      <label>
         รหัสผ่าน
       </label>
 
       <input
         type="password"
-        id="p"
-        autocomplete="current-password">
+        id="password"
+        value="123456"
+        placeholder="ใส่อะไรก็ได้"
+      >
 
 
-      <div
-        class="msg"
-        id="m"
-        role="alert">
-      </div>
+      <div class="login-note">
 
+        ระบบทดลองสำหรับดูหน้าเว็บไซต์<br>
 
-      <div class="alt">
+        ตอนนี้สามารถใช้ชื่ออะไรก็ได้<br>
 
-        เข้าใช้ครั้งแรก -
-
-        <a
-          role="button"
-          tabindex="0"
-          id="reg">
-
-          ลงทะเบียนเข้าใช้
-
-        </a>
+        ระบบจะใช้เลขห้องจากชื่อ เช่น
+        <b>วริศรา_6/9</b>
 
       </div>
 
 
       <button
         class="btn"
-        id="ok"
+        id="enter"
         style="width:100%">
 
-        เข้าสู่ระบบ
+        เข้าสู่เว็บไซต์
 
       </button>
 
@@ -2325,627 +1336,166 @@ function login(){
   `;
 
 
-  $("#reg").onclick =
-    () => go("register");
-
-
-  $("#ok").onclick =
-    async () => {
-
-      const u =
-        $("#u")
-          .value
-          .trim();
-
-
-      const p =
-        $("#p")
-          .value;
-
-
-      const m =
-        $("#m");
-
-
-      if(!u || !p){
-
-        m.textContent =
-          "กรุณากรอกชื่อผู้ใช้งานและรหัสผ่าน";
-
-        return;
-
-      }
-
-
-      if(!sb){
-
-        m.textContent =
-          noSb();
-
-        return;
-
-      }
-
-
-      m.textContent =
-        "กำลังเข้าสู่ระบบ...";
-
-
-      try{
-
-        const result =
-          await sb.auth.signInWithPassword({
-
-            email:
-              await email(u),
-
-            password:p
-
-          });
-
-
-        const {
-          data,
-          error
-        } = result;
-
-
-        if(error){
-
-          console.error(
-            "Login error:",
-            error
-          );
-
-
-          m.textContent =
-            "ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง";
-
-
-          return;
-
-        }
-
-
-        setSession(
-          data.user
-        );
-
-
-        if(!session.room){
-
-          m.textContent =
-            "บัญชีนี้ไม่มีข้อมูลเลขห้อง";
-
-
-          return;
-
-        }
-
-
-        go("dash");
-
-      }
-
-
-      catch(e){
-
-        console.error(e);
-
-
-        m.textContent =
-          "เกิดข้อผิดพลาดในการเข้าสู่ระบบ";
-
-      }
-
-    };
+  document
+    .getElementById("enter")
+    .onclick =
+      enterDemo;
 
 }
 
 
-/* =========================================================
-   Register
-========================================================= */
+/* =====================================================
+   ENTER DEMO
+===================================================== */
 
-function register(){
+function enterDemo(){
 
-  app.innerHTML = `
-
-    <div
-      class="hero"
-      style="padding-bottom:0">
-
-      <div
-        class="script"
-        style="font-size:clamp(52px,12vw,90px)">
-
-        First time in
-
-      </div>
-
-      <p>
-        TUP 44 FAREWELL
-      </p>
-
-    </div>
+  const input =
+    document
+      .getElementById("username")
+      .value
+      .trim();
 
 
-    <div class="panel">
+  /*
+    ถ้าพิมพ์ ..._6/9
+    จะอ่านเลขห้องออกมา
 
-      <label for="u">
-        ชื่อผู้ใช้งาน
-      </label>
+    ถ้าอ่านไม่ได้
+    ใช้ห้อง 9 เป็นค่าเริ่มต้น
+  */
 
-      <input
-        type="text"
-        id="u"
-        placeholder="เช่น สมชาย_6/1"
-        autocomplete="username">
-
-
-      <label for="p">
-        รหัสผ่าน
-      </label>
-
-      <input
-        type="password"
-        id="p"
-        autocomplete="new-password">
+  const match =
+    input.match(
+      /6\s*\/\s*(\d{1,2})\s*$/
+    );
 
 
-      <label for="c">
-        ยืนยันรหัสผ่าน
-      </label>
+  if(match){
 
-      <input
-        type="password"
-        id="c"
-        autocomplete="new-password">
-
-
-      <div
-        class="msg"
-        id="m"
-        role="alert">
-      </div>
-
-
-      <button
-        class="btn"
-        id="ok"
-        style="width:100%">
-
-        ลงทะเบียน
-
-      </button>
-
-
-      <div class="alt">
-
-        <a
-          role="button"
-          tabindex="0"
-          id="back">
-
-          กลับไปหน้าเข้าสู่ระบบ
-
-        </a>
-
-      </div>
-
-    </div>
-
-  `;
-
-
-  $("#back").onclick =
-    () => go("login");
-
-
-  $("#ok").onclick =
-    async () => {
-
-      const u =
-        $("#u")
-          .value
-          .trim();
-
-
-      const p =
-        $("#p")
-          .value;
-
-
-      const c =
-        $("#c")
-          .value;
-
-
-      const m =
-        $("#m");
-
-
-      if(!sb){
-
-        m.textContent =
-          noSb();
-
-        return;
-
-      }
-
-
-      /*
-        ตรวจชื่อผู้ใช้
-      */
-
-      const room =
-        roomOf(u);
-
-
-      console.log(
-        "ชื่อผู้ใช้:",
-        JSON.stringify(u)
+    const room =
+      Number(
+        match[1]
       );
 
 
-      console.log(
-        "เลขห้องที่อ่านได้:",
-        room
-      );
-
-
-      if(!room){
-
-        m.textContent =
-          "ชื่อผู้ใช้ต้องลงท้ายด้วย _6/ตามด้วยเลขห้อง 1–20 เช่น สมชาย_6/1";
-
-        return;
-
-      }
-
-
-      if(p.length < 6){
-
-        m.textContent =
-          "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร";
-
-        return;
-
-      }
-
-
-      if(p !== c){
-
-        m.textContent =
-          "รหัสผ่านและการยืนยันไม่ตรงกัน";
-
-        return;
-
-      }
-
-
-      m.textContent =
-        "กำลังลงทะเบียน...";
-
-
-      try{
-
-        const {
-
-          data,
-
-          error
-
-        } =
-
-          await sb.auth.signUp({
-
-            email:
-              await email(u),
-
-            password:p,
-
-            options:{
-
-              data:{
-
-                username:u,
-
-                room:String(room)
-
-              }
-
-            }
-
-          });
-
-
-        if(error){
-
-          console.error(
-            "Register error:",
-            error
-          );
-
-
-          if(
-
-            /already registered|already been registered|registered/i
-              .test(
-                error.message
-              )
-
-          ){
-
-            m.textContent =
-              "ชื่อผู้ใช้นี้ถูกใช้แล้ว";
-
-          }
-
-          else{
-
-            m.textContent =
-              "ลงทะเบียนไม่สำเร็จ: " +
-              error.message;
-
-          }
-
-
-          return;
-
-        }
-
-
-        if(!data.session){
-
-          m.textContent =
-            "ลงทะเบียนสำเร็จ แต่ต้องยืนยันอีเมลก่อนเข้าสู่ระบบ หากต้องการให้เข้าได้ทันที ให้ปิด Confirm email ใน Supabase Authentication";
-
-          return;
-
-        }
-
-
-        setSession(
-          data.user
-        );
-
-
-        go("dash");
-
-      }
-
-
-      catch(e){
-
-        console.error(e);
-
-
-        m.textContent =
-          "เกิดข้อผิดพลาดในการลงทะเบียน";
-
-      }
-
-    };
-
-}
-
-
-/* =========================================================
-   ตารางข้อมูล
-========================================================= */
-
-let tab = 2;
-
-
-function tableHTML(k){
-
-  const r =
-    ROUNDS[k];
-
-
-  let h = `
-
-    <div
-      style="
-        text-align:center;
-        font-size:14px
-      ">
-
-      ${CLOSED[k]}
-
-      <br>
-
-      ยอดเงินงานปัจฉิมรอบที่
-      ${k+1}
-
-      (${r.date})
-
-      อัปเดตเวลา
-      ${r.time}
-      น.
-
-    </div>
-
-
-    <div class="tw">
-
-      <table>
-
-        <thead>
-
-          <tr>
-
-            <th>
-              ห้อง
-            </th>
-
-            <th>
-              จำนวน (คน)
-            </th>
-
-            <th>
-              ยอดเงิน (บาท)
-            </th>
-
-            <th>
-              สถานะ
-            </th>
-
-          </tr>
-
-        </thead>
-
-        <tbody>
-
-  `;
-
-
-  P.forEach(
-
-    (p,i) => {
-
-      const s =
-        status(k,i);
-
-
-      const a =
-        r.amt[i];
-
-
-      const lb =
-
-        s.c === "ok"
-
-          ? "ตรวจสอบแล้ว (ครบถ้วน)"
-
-          : s.c === "bad"
-
-            ? `ตรวจสอบแล้ว (ขาด ${
-                Math.round(
-                  (
-                    p*RATE[k]-a
-                  ) /
-                  RATE[k]
-                )
-              } คน)`
-
-            : "ยังไม่มียอด";
-
-
-      h += `
-
-        <tr>
-
-          <td>
-            ม.6/${i+1}
-          </td>
-
-          <td>
-            ${p}
-          </td>
-
-          <td>
-            ${
-              a == null
-                ? "-"
-                : fmt(a)
-            }
-          </td>
-
-          <td>
-
-            <span
-              class="dot ${s.c}">
-            </span>
-
-            ${lb}
-
-          </td>
-
-        </tr>
-
-      `;
+    if(
+      room >= 1 &&
+      room <= 20
+    ){
+
+      currentRoom =
+        room;
 
     }
 
-  );
+  }
 
 
-  h += `
-
-        </tbody>
-
-        <tfoot>
-
-          <tr>
-
-            <td colspan="4">
-
-              ยอดรวม
-
-              จำนวน
-              ${Math.round(
-                sum(r.amt) /
-                RATE[k]
-              )}
-              คน
-
-              ยอดเงิน
-              ${fmt(income[k])}
-              บาท
-
-              [
-
-              ${BANK[k]}
-
-              ]
-
-            </td>
-
-          </tr>
-
-        </tfoot>
-
-      </table>
-
-    </div>
-
-  `;
+  currentUser =
+    input ||
+    "วริศรา_6/9";
 
 
-  return h;
+  showDashboard();
 
 }
 
 
-/* =========================================================
-   Dashboard
-========================================================= */
+/* =====================================================
+   HEADER USER
+===================================================== */
 
-function dash(){
+function updateHeader(){
 
-  recalc();
+  const who =
+    document.getElementById("who");
+
+
+  if(!currentUser){
+
+    who.innerHTML = "";
+
+    return;
+
+  }
+
+
+  who.innerHTML = `
+
+    ห้อง ม.6/${currentRoom}
+
+    <a
+      id="logout">
+
+      ออกจากระบบ
+
+    </a>
+
+  `;
+
+
+  document
+    .getElementById("logout")
+    .onclick =
+      () => {
+
+        currentUser =
+          null;
+
+        currentRoom =
+          9;
+
+        showHome();
+
+      };
+
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+function showDashboard(){
+
+  updateHeader();
+
+
+  const incomes =
+    ROUNDS.map(
+      r =>
+        total(r.amount)
+    );
 
 
   app.innerHTML = `
 
     <div
       class="hero"
-      style="padding:20px 0 0">
+      style="
+        padding:
+        20px
+        0
+        0">
 
       <h1
         class="title"
         style="
-          font-size:clamp(40px,9vw,64px);
+          font-size:
+          clamp(
+            42px,
+            9vw,
+            68px
+          );
           margin:0">
 
         TUP 44
 
         <span
           class="script"
-          style="font-size:1.3em">
+          style="
+            font-size:1.25em">
 
           Farewell
 
@@ -2958,6 +1508,8 @@ function dash(){
 
     <div class="grid">
 
+
+      <!-- รายรับ -->
 
       <div class="box">
 
@@ -2974,24 +1526,22 @@ function dash(){
 
               <span>
 
-                รอบที่
-                ${i+1}
+                รอบที่ ${i+1}
 
-                (${r.date})
+                <br>
 
-                ${
-                  BANK_VERIFIED[i]
-                    ? ""
-                    : " *"
-                }
+                <small>
+                  ${r.date}
+                </small>
 
               </span>
 
               <b>
 
-                ${fmt(
-                  income[i]
+                ${money(
+                  incomes[i]
                 )}
+                บาท
 
               </b>
 
@@ -3010,7 +1560,10 @@ function dash(){
 
           <b>
 
-            ${fmt(totalIn)}
+            ${money(
+              incomeTotal()
+            )}
+
             บาท
 
           </b>
@@ -3020,12 +1573,15 @@ function dash(){
 
         <div class="note">
 
-          * ยังไม่ได้ตรวจสอบกับยอดธนาคาร
+          * รอบที่ 3
+          ยังไม่ได้ตรวจสอบกับยอดธนาคาร
 
         </div>
 
       </div>
 
+
+      <!-- รายจ่าย -->
 
       <div class="box">
 
@@ -3034,73 +1590,54 @@ function dash(){
         </h2>
 
 
-        ${
-          EXPENSES.length
+        ${EXPENSES.map(
 
-            ?
+          e => `
 
-              EXPENSES.map(
+            <div class="row">
 
-                e => `
+              <span>
 
-                  <div class="row">
+                ${e.date}
 
-                    <span>
+                <br>
 
-                      ${e.d}
-                      ${e.n}
+                ${e.name}
 
-                      <br>
+                <br>
 
-                      <small>
+                <small>
 
-                        ราคา
-                        ${fmt(e.unit)}
-                        x
-                        ${e.qty}
-                        หน่วย
+                  ${money(e.unit)}
+                  ×
+                  ${e.qty}
 
-                        =
+                  =
+                  ${money(
+                    e.unit *
+                    e.qty
+                  )}
 
-                        ${fmt(
-                          e.unit *
-                          e.qty
-                        )}
+                </small>
 
-                        · มัดจำ
-
-                      </small>
-
-                    </span>
-
-                    <b>
-
-                      ${fmt(
-                        e.paid
-                      )}
-
-                    </b>
-
-                  </div>
-
-                `
-
-              ).join("")
+              </span>
 
 
-            :
+              <b>
 
-              `
+                ${money(
+                  e.paid
+                )}
 
-                <div class="note">
+                บาท
 
-                  ยังไม่มีข้อมูลรายจ่าย
+              </b>
 
-                </div>
+            </div>
 
-              `
+          `
 
-        }
+        ).join("")}
 
 
         <div class="row">
@@ -3111,7 +1648,10 @@ function dash(){
 
           <b>
 
-            ${fmt(totalOut)}
+            ${money(
+              expenseTotal()
+            )}
+
             บาท
 
           </b>
@@ -3121,12 +1661,14 @@ function dash(){
 
         <div class="note">
 
-          ${EXP_NOTE}
+          ${EXPENSE_NOTE}
 
         </div>
 
       </div>
 
+
+      <!-- BALANCE -->
 
       <div class="box wide">
 
@@ -3137,7 +1679,10 @@ function dash(){
 
         <div class="big">
 
-          ${fmt(balance)}
+          ${money(
+            balance()
+          )}
+
           บาท
 
         </div>
@@ -3145,15 +1690,16 @@ function dash(){
 
         <div
           class="note"
-          style="text-align:center">
+          style="
+            text-align:center">
 
           ยอดหลังรอบที่ 2
           ที่ตรวจตรงกับธนาคารแล้ว:
 
-          ${fmt(
-            income[0] +
-            income[1] -
-            totalOut
+          ${money(
+            incomes[0] +
+            incomes[1] -
+            expenseTotal()
           )}
 
           บาท
@@ -3165,9 +1711,13 @@ function dash(){
     </div>
 
 
+    <!-- TABLE -->
+
     <div
       class="box wide"
-      style="margin-top:38px">
+      style="
+        margin-top:
+        38px">
 
       <h2>
         ยอดเงินทุกห้อง
@@ -3176,31 +1726,52 @@ function dash(){
 
       <div class="tabs">
 
-        ${ROUNDS.map(
+        <button
+          data-round="0"
+          class="${
+            selectedRound === 0
+              ? "active"
+              : ""
+          }">
 
-          (_,k) => `
+          รอบที่ 1
 
-            <button
-              data-t="${k}"
-              class="${
-                k === tab
-                  ? "on"
-                  : ""
-              }">
+        </button>
 
-              รอบที่
-              ${k+1}
 
-            </button>
+        <button
+          data-round="1"
+          class="${
+            selectedRound === 1
+              ? "active"
+              : ""
+          }">
 
-          `
+          รอบที่ 2
 
-        ).join("")}
+        </button>
+
+
+        <button
+          data-round="2"
+          class="${
+            selectedRound === 2
+              ? "active"
+              : ""
+          }">
+
+          รอบที่ 3
+
+        </button>
 
       </div>
 
 
-      ${tableHTML(tab)}
+      <div class="table-wrap">
+
+        ${createTable()}
+
+      </div>
 
     </div>
 
@@ -3209,7 +1780,7 @@ function dash(){
 
       <button
         class="btn"
-        id="r">
+        id="roomButton">
 
         ยอดเงินของห้อง
 
@@ -3220,185 +1791,221 @@ function dash(){
   `;
 
 
-  $("#r").onclick =
-    () => go("room");
+  document
+    .querySelectorAll(
+      "[data-round]"
+    )
+    .forEach(
+
+      button => {
+
+        button.onclick =
+          () => {
+
+            selectedRound =
+              Number(
+                button
+                  .dataset
+                  .round
+              );
+
+            showDashboard();
+
+          };
+
+      }
+
+    );
 
 
   document
-    .querySelectorAll("[data-t]")
-    .forEach(
-
-      b =>
-
-        b.onclick = () => {
-
-          tab =
-            +b.dataset.t;
-
-          dash();
-
-        }
-
-    );
+    .getElementById(
+      "roomButton"
+    )
+    .onclick =
+      showRoom;
 
 }
 
 
-/* =========================================================
-   หน้า Room
-========================================================= */
+/* =====================================================
+   TABLE
+===================================================== */
 
-function room(){
+function createTable(){
 
-  if(
-    !session ||
-    !session.room
-  ){
-
-    app.innerHTML = `
-
-      <div class="panel">
-
-        <p>
-          ไม่พบเลขห้องในชื่อผู้ใช้
-        </p>
-
-        <button
-          class="btn"
-          id="b">
-
-          กลับหน้าหลัก
-
-        </button>
-
-      </div>
-
-    `;
+  const round =
+    ROUNDS[
+      selectedRound
+    ];
 
 
-    $("#b").onclick =
-      () => go("dash");
+  let html = `
 
+    <p
+      style="
+        text-align:center">
 
-    return;
-
-  }
-
-
-  const i =
-    session.room - 1;
-
-
-  const cards =
-
-    ROUNDS.map(
-
-      (r,k) => {
-
-        const s =
-          status(k,i);
-
-
-        const a =
-          r.amt[i];
-
-
-        return `
-
-          <div class="rd">
-
-            <div class="box">
-
-              <h2>
-
-                ยอดครั้งที่
-                ${k+1}
-
-              </h2>
-
-
-              <div class="amt">
-
-                ${
-                  a == null
-                    ? "-"
-                    : fmt(a)
-                }
-
-              </div>
-
-
-              <div class="st">
-
-                <span
-                  class="dot ${s.c}">
-                </span>
-
-                ${s.t}
-
-              </div>
-
-            </div>
-
-
-            <button
-              class="btn sm"
-              data-k="${k}">
-
-              อัปโหลดสลิป
-
-            </button>
-
-
-            <input
-              type="file"
-              accept="image/*,.pdf"
-              hidden
-              data-f="${k}">
-
-
-            <div
-              class="fn"
-              id="fn${k}">
-
-              ${
-                slips[k]
-                  ? "อัปโหลดแล้ว: " +
-                    slips[k]
-                  : ""
-              }
-
-            </div>
-
-          </div>
-
-        `;
-
+      ${
+        selectedRound === 0
+          ? "ปิดยอดครั้งที่ 1"
+          : selectedRound === 1
+            ? "ปิดยอดครั้งที่ 2"
+            : "อยู่ระหว่างเก็บยอดครั้งที่ 3"
       }
 
-    ).join("");
+      <br>
+
+      วันที่
+      ${round.date}
+
+      เวลา
+      ${round.time}
+      น.
+
+    </p>
 
 
-  const paid =
-    sum(
+    <table>
 
-      ROUNDS.map(
-        r => r.amt[i]
-      )
+      <thead>
 
+        <tr>
+
+          <th>
+            ห้อง
+          </th>
+
+          <th>
+            จำนวน
+          </th>
+
+          <th>
+            ยอดเงิน
+          </th>
+
+          <th>
+            สถานะ
+          </th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+  `;
+
+
+  PEOPLE.forEach(
+
+    (people,i) => {
+
+      const amount =
+        round.amount[i];
+
+
+      const status =
+        getStatus(
+          selectedRound,
+          i
+        );
+
+
+      html += `
+
+        <tr>
+
+          <td>
+            ม.6/${i+1}
+          </td>
+
+          <td>
+            ${people}
+          </td>
+
+          <td>
+
+            ${
+              amount === null
+                ? "-"
+                : money(amount)
+            }
+
+          </td>
+
+          <td>
+
+            <span
+              class="dot ${status}">
+            </span>
+
+            ${statusText(
+              selectedRound,
+              i
+            )}
+
+          </td>
+
+        </tr>
+
+      `;
+
+    }
+
+  );
+
+
+  html += `
+
+      </tbody>
+
+    </table>
+
+  `;
+
+
+  return html;
+
+}
+
+
+/* =====================================================
+   ROOM PAGE
+===================================================== */
+
+function showRoom(){
+
+  updateHeader();
+
+
+  const index =
+    currentRoom - 1;
+
+
+  const requiredTotal =
+    PEOPLE[index] *
+    (
+      RATE[0] +
+      RATE[1] +
+      RATE[2]
     );
 
 
-  const exp =
-    P[i] *
-    sum(RATE);
+  const paidTotal =
+    total(
+      ROUNDS.map(
+        r =>
+          r.amount[index]
+      )
+    );
 
 
   app.innerHTML = `
 
-    <h1 class="room">
+    <h1 class="room-title">
 
-      M.6/${session.room}
+      M.6/${currentRoom}
 
     </h1>
 
@@ -3436,14 +2043,117 @@ function room(){
 
     <div class="rounds">
 
-      ${cards}
+
+      ${ROUNDS.map(
+
+        (round,k) => {
+
+          const amount =
+            round.amount[index];
+
+
+          const status =
+            getStatus(
+              k,
+              index
+            );
+
+
+          return `
+
+            <div class="rd">
+
+              <div class="box">
+
+                <h2>
+
+                  ยอดครั้งที่
+                  ${k+1}
+
+                </h2>
+
+
+                <div class="amount">
+
+                  ${
+                    amount === null
+                      ? "-"
+                      : money(amount)
+                  }
+
+                  ${
+                    amount === null
+                      ? ""
+                      : " บาท"
+                  }
+
+                </div>
+
+
+                <div class="status">
+
+                  <span
+                    class="
+                      dot
+                      ${status}
+                    ">
+                  </span>
+
+                  ${statusText(
+                    k,
+                    index
+                  )}
+
+                </div>
+
+              </div>
+
+
+              <button
+                class="btn small"
+                data-upload="${k}">
+
+                อัปโหลดสลิป
+
+              </button>
+
+
+              <input
+                type="file"
+                hidden
+                accept="
+                  image/*,
+                  .pdf
+                "
+                data-file="${k}"
+              >
+
+
+              <div
+                class="upload-name"
+                id="
+                  uploadName${k}
+                ">
+
+              </div>
+
+            </div>
+
+          `;
+
+        }
+
+      ).join("")}
+
 
     </div>
 
 
     <div
-      class="rd total"
-      style="margin-top:34px">
+      class="rd"
+      style="
+        margin-top:
+        35px">
 
       <div class="box">
 
@@ -3452,22 +2162,39 @@ function room(){
         </h2>
 
 
-        <div class="amt">
+        <div class="amount"
+          style="
+            font-size:
+            clamp(
+              40px,
+              10vw,
+              68px
+            )">
 
-          ${fmt(paid)}
+          ${money(
+            paidTotal
+          )}
+
           บาท
 
         </div>
 
 
-        <div class="st">
+        <div class="status">
 
-          จากยอดที่ต้องชำระครบ 3 รอบ
+          ยอดที่ต้องชำระทั้งหมด
 
-          ${fmt(exp)}
+          ${money(
+            requiredTotal
+          )}
+
           บาท
 
-          (${P[i]} คน)
+          <br>
+
+          จำนวน
+          ${PEOPLE[index]}
+          คน
 
         </div>
 
@@ -3480,7 +2207,7 @@ function room(){
 
       <button
         class="btn"
-        id="b">
+        id="back">
 
         กลับหน้าหลัก
 
@@ -3491,67 +2218,66 @@ function room(){
   `;
 
 
-  $("#b").onclick =
-    () => go("dash");
+  document
+    .getElementById("back")
+    .onclick =
+      showDashboard;
 
 
   document
-    .querySelectorAll("[data-k]")
+    .querySelectorAll(
+      "[data-upload]"
+    )
     .forEach(
 
-      b =>
+      button => {
 
-        b.onclick = () => {
+        button.onclick =
+          () => {
 
-          const f =
-            document.querySelector(
-              `[data-f="${b.dataset.k}"]`
-            );
+            const k =
+              Number(
+                button
+                  .dataset
+                  .upload
+              );
 
 
-          if(f){
+            const input =
+              document.querySelector(
+                `[data-file="${k}"]`
+              );
 
-            f.click();
 
-          }
+            if(input){
 
-        }
+              input.click();
+
+            }
+
+          };
+
+      }
 
     );
 
 
   document
-    .querySelectorAll("[data-f]")
+    .querySelectorAll(
+      "[data-file]"
+    )
     .forEach(
 
-      f => {
+      input => {
 
-        f.onchange =
-          async () => {
-
-            const k =
-              +f.dataset.f;
-
+        input.onchange =
+          () => {
 
             const file =
-              f.files[0];
-
-
-            const fn =
-              $("#fn"+k);
+              input.files[0];
 
 
             if(!file){
-
-              return;
-
-            }
-
-
-            if(!sb){
-
-              fn.textContent =
-                noSb();
 
               return;
 
@@ -3563,135 +2289,35 @@ function room(){
               5 * 1024 * 1024
             ){
 
-              fn.textContent =
-                "ไฟล์ใหญ่เกิน 5 MB";
+              alert(
+                "ไฟล์ต้องมีขนาดไม่เกิน 5 MB"
+              );
+
+              input.value =
+                "";
 
               return;
 
             }
 
 
-            fn.textContent =
-              "กำลังอัปโหลด...";
-
-
-            const ext =
-
-              (
-
-                file.name
-                  .split(".")
-                  .pop() ||
-
-                "jpg"
-
-              )
-
-                .toLowerCase()
-
-                .replace(
-                  /[^a-z0-9]/g,
-                  ""
-                ) ||
-
-              "jpg";
-
-
-            const path =
-
-              `${session.room}/${k+1}/${Date.now()}.${ext}`;
-
-
-            try{
-
-              const {
-
-                error
-
-              } =
-
-                await sb
-
-                  .storage
-
-                  .from("slips")
-
-                  .upload(
-
-                    path,
-
-                    file,
-
-                    {
-
-                      contentType:
-                        file.type ||
-                        "application/octet-stream",
-
-                      upsert:false
-
-                    }
-
-                  );
-
-
-              if(error){
-
-                console.error(
-                  "Upload error:",
-                  error
-                );
-
-
-                fn.textContent =
-                  "อัปโหลดไม่สำเร็จ: " +
-                  error.message;
-
-
-                return;
-
-              }
-
-
-              slips[k] =
-                file.name;
-
-
-              store.set(
-
-                `slip_${session.room}_${k+1}`,
-
-                {
-
-                  name:file.name,
-
-                  path:path,
-
-                  uploadedAt:
-                    new Date()
-                      .toISOString()
-
-                }
-
+            const k =
+              Number(
+                input
+                  .dataset
+                  .file
               );
 
 
-              fn.textContent =
-                "อัปโหลดสำเร็จ: " +
-                file.name;
-
-            }
-
-
-            catch(e){
-
-              console.error(e);
+            const output =
+              document.getElementById(
+                "uploadName" + k
+              );
 
 
-              fn.textContent =
-                "เกิดข้อผิดพลาดในการอัปโหลด";
-
-            }
+            output.textContent =
+              "เลือกไฟล์แล้ว: " +
+              file.name;
 
           };
 
@@ -3702,119 +2328,11 @@ function room(){
 }
 
 
-/* =========================================================
-   โหลดสลิปที่เคยบันทึกไว้ในเครื่อง
-========================================================= */
+/* =====================================================
+   START
+===================================================== */
 
-function loadLocalSlips(){
-
-  if(
-    !session ||
-    !session.room
-  ){
-
-    return;
-
-  }
-
-
-  slips = {};
-
-
-  for(
-    let k=0;
-    k<3;
-    k++
-  ){
-
-    const data =
-      store.get(
-        `slip_${session.room}_${k+1}`
-      );
-
-
-    if(data){
-
-      slips[k] =
-        data.name || "";
-
-    }
-
-  }
-
-}
-
-
-/* =========================================================
-   เริ่มเว็บไซต์
-========================================================= */
-
-(async()=>{
-
-  recalc();
-
-
-  await loadData();
-
-
-  if(sb){
-
-    try{
-
-      const {
-
-        data,
-
-        error
-
-      } =
-
-        await sb.auth.getSession();
-
-
-      if(
-
-        !error &&
-
-        data &&
-
-        data.session
-
-      ){
-
-        setSession(
-          data.session.user
-        );
-
-
-        loadLocalSlips();
-
-      }
-
-    }
-
-
-    catch(e){
-
-      console.warn(
-        "อ่าน Session ไม่สำเร็จ:",
-        e
-      );
-
-    }
-
-  }
-
-
-  go(
-
-    session
-      ? "dash"
-      : "home"
-
-  );
-
-})();
+showHome();
 
 </script>
 
