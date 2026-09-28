@@ -72,8 +72,9 @@ th{font-family:'Mitr';font-weight:500;color:var(--mauve)}tfoot td{font-weight:60
 <body>
 <div class="top"><div class="brand">TUP 44 Farewell<small>TRIAMUDOMSAKKAPATANAKRAN SCHOOL</small></div><div class="who" id="who"></div></div>
 <main id="app"></main>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+<script>window.supabase||document.write('<script src="https://unpkg.com/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"><\/script>')</script>
+<script>document.write('<script src="config.js?t='+Date.now()+'"><\/script>')</script>
 <script>
 // ===== ข้อมูล (แก้ตรงนี้เมื่อมียอดใหม่) =====
 let P=[28,25,26,39,38,27,34,33,36,36,35,36,36,36,40,28,31,38,37,33]; // จำนวนคนห้อง 6/1–6/20
@@ -132,6 +133,7 @@ async function loadData(){
   EXPENSES=ex.map(x=>({d:x.date,n:x.name,paid:num(x.paid)||0}));
   recalc();
  }catch(e){console.warn('โหลด Google Sheets ไม่สำเร็จ ใช้ข้อมูลสำรองในไฟล์',e)}}
+const noSb=()=>!CONFIG.supabaseUrl?'config.js ยังว่าง: ยังไม่ได้ Commit หรือเบราว์เซอร์จำไฟล์เก่า':'โหลดไลบรารี Supabase ไม่ได้: ปิดตัวบล็อกโฆษณาหรือเปลี่ยนเครือข่ายแล้วลองใหม่';
 const sb=(CONFIG.supabaseUrl&&window.supabase)?supabase.createClient(CONFIG.supabaseUrl,CONFIG.supabaseKey):null;
 const email=async u=>'h'+(await hash(u)).slice(0,32)+'@tup44.app';
 const setSession=u=>{session={user:u.user_metadata.username,room:+u.user_metadata.room}};
@@ -142,7 +144,7 @@ function login(){app.innerHTML=`<div class="hero" style="padding-bottom:0"><div 
 <div class="alt">เข้าใช้ครั้งแรก - <a role="button" tabindex="0" id="reg">ลงทะเบียนเข้าใช้</a></div><button class="btn" id="ok" style="width:100%">เข้าสู่ระบบ</button></div>`;
  $('#reg').onclick=()=>go('register');
  $('#ok').onclick=async()=>{const u=$('#u').value.trim(),m=$('#m');
-  if(!sb)return m.textContent='ยังไม่ได้ตั้งค่า Supabase ในไฟล์ config.js';
+  if(!sb)return m.textContent=noSb();
   m.textContent='กำลังเข้าสู่ระบบ...';
   const{data,error}=await sb.auth.signInWithPassword({email:await email(u),password:$('#p').value});
   if(error)return m.textContent='ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง';
@@ -151,7 +153,7 @@ function register(){app.innerHTML=`<div class="hero" style="padding-bottom:0"><d
 <div class="panel"><label for="u">ชื่อผู้ใช้งาน</label><input type="text" id="u" placeholder="เช่น สมชาย_6/1"><label for="p">รหัสผ่าน</label><input type="password" id="p"><label for="c">ยืนยันรหัสผ่าน</label><input type="password" id="c"><div class="msg" id="m" role="alert"></div><button class="btn" id="ok" style="width:100%">ลงทะเบียน</button><div class="alt"><a role="button" tabindex="0" id="back">กลับไปหน้าเข้าสู่ระบบ</a></div></div>`;
  $('#back').onclick=()=>go('login');
  $('#ok').onclick=async()=>{const u=$('#u').value.trim(),p=$('#p').value,m=$('#m');
-  if(!sb)return m.textContent='ยังไม่ได้ตั้งค่า Supabase ในไฟล์ config.js';
+  if(!sb)return m.textContent=noSb();
   if(!roomOf(u))return m.textContent='ชื่อผู้ใช้ต้องลงท้ายด้วย _6/ตามด้วยเลขห้อง 1–20 เช่น สมชาย_6/1';
   if(p.length<6)return m.textContent='รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร';
   if(p!==$('#c').value)return m.textContent='รหัสผ่านและการยืนยันไม่ตรงกัน';
@@ -186,7 +188,7 @@ function room(){const i=session.room-1;
  $('#b').onclick=()=>go('dash');
  document.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>document.querySelector(`[data-f="${b.dataset.k}"]`).click());
  document.querySelectorAll('[data-f]').forEach(f=>f.onchange=async()=>{const k=+f.dataset.f,file=f.files[0],fn=$('#fn'+k);if(!file)return;
-  if(!sb){fn.textContent='ยังไม่ได้ตั้งค่า Supabase';return}
+  if(!sb){fn.textContent=noSb();return}
   if(file.size>5*1024*1024){fn.textContent='ไฟล์ใหญ่เกิน 5 MB';return}
   fn.textContent='กำลังอัปโหลด...';
   const ext=(file.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'')||'jpg';
